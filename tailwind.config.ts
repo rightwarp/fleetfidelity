@@ -1,18 +1,15 @@
-import type { Config } from "tailwindcss";
+import TailwindForms from "@tailwindcss/forms"
+import TailwindTypography from "@tailwindcss/typography"
+import DaisyUI from "daisyui"
+import type { Config } from "tailwindcss"
+
+import { TAILWIND_THEME, DEFAULT_THEME } from "./config/tailwind"
 
 export default {
-  content: [
-    "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
-    "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
-    "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
-  ],
-  theme: {
-    extend: {
-      colors: {
-        background: "var(--background)",
-        foreground: "var(--foreground)",
-      },
-    },
+  content: ["./src/**/*.{js,ts,jsx,tsx,mdx}", "./tina/**/*.{js,ts,jsx,tsx,mdx}"],
+  theme: { extend: TAILWIND_THEME },
+  plugins: [TailwindTypography, TailwindForms, DaisyUI],
+  daisyui: {
+    themes: [{ light: DEFAULT_THEME }],
   },
-  plugins: [],
-} satisfies Config;
+} satisfies Config
