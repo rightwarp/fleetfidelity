@@ -33,8 +33,14 @@ export const Header: Collection = {
         {
           name: "href",
           label: "Href",
+          description: "Use when the link is external",
           type: "string",
-          required: true,
+        },
+        {
+          name: "pageRef",
+          label: "Link To Page",
+          type: "reference",
+          collections: ["page"],
         },
         {
           name: "actionType",

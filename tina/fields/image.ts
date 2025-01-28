@@ -16,7 +16,7 @@ export const createImageField = ({
     {
       name: "src",
       label: "Image",
-      type: "string",
+      type: "image",
       required: true,
     },
     {

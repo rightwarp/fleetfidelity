@@ -33,8 +33,14 @@ export const Footer: Collection = {
         {
           name: "href",
           label: "Href",
+          description: "Use when the link is external",
           type: "string",
-          required: true,
+        },
+        {
+          name: "pageRef",
+          label: "Link To Page",
+          type: "reference",
+          collections: ["page"],
         },
       ],
     },
@@ -45,7 +51,7 @@ export const Footer: Collection = {
     },
     {
       name: "contact",
-      label: "Contact Links",
+      label: "Contact Methods",
       type: "object",
       list: true,
       ui: {
@@ -85,7 +91,14 @@ export const Footer: Collection = {
           name: "icon",
           label: "Icon",
           type: "string",
-          options: ["Facebook", "Instagram", "X", "LinkedIn"],
+          options: [
+            "Facebook",
+            "Instagram",
+            "X",
+            "LinkedIn",
+            "YouTube",
+            "Bluesky",
+          ],
         },
       ],
     },

@@ -41,13 +41,13 @@ export const Global: Collection = {
         {
           name: "privacy",
           label: "Privacy Policy",
-          type: "string",
+          type: "rich-text",
           required: true,
         },
         {
           name: "terms",
           label: "Terms of Service",
-          type: "string",
+          type: "rich-text",
           required: true,
         },
       ],

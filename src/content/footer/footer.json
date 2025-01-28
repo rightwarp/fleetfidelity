@@ -1,1 +1,58 @@
-{}
+{
+  "logo": {
+    "src": "/uploads/logo.svg",
+    "alt": "Fleet Fidelity"
+  },
+  "navigation": [
+    {
+      "label": "Home",
+      "pageRef": "src/content/pages/home.json"
+    },
+    {
+      "label": "About",
+      "pageRef": "src/content/pages/about.json"
+    },
+    {
+      "label": "Resources",
+      "pageRef": "src/content/pages/resources.json"
+    },
+    {
+      "label": "Contact",
+      "pageRef": "src/content/pages/contact.json"
+    },
+    {
+      "label": "Login",
+      "href": "https://auth.fleetfidelity.com/realms/Fleet_Fidelity/protocol/openid-connect/auth?client_id=fleet-fidelity&redirect_uri=https%3A%2F%2Fapp.fleetfidelity.com%2F&response_type=code&scope=openid&state=5c53ca84145046dcb5f01c9a80957655&code_challenge=6HL155BkQYG91l-toa11Li3QhcfRyVEBGFaN3fxJ5Vg&code_challenge_method=S256&response_mode=query"
+    },
+    {
+      "label": "Privacy Policy",
+      "pageRef": "src/content/pages/privacy.json"
+    },
+    {
+      "label": "Terms of Service",
+      "pageRef": "src/content/pages/terms.json"
+    }
+  ],
+  "tagline": "Performance Platform by Yahara Software",
+  "contact": [
+    {
+      "label": "1-608-821-1750",
+      "icon": "Phone"
+    },
+    {
+      "label": "contact@fleetfidelity.com",
+      "icon": "Mail"
+    }
+  ],
+  "social": [
+    {
+      "href": "https://www.linkedin.com/company/yahara-software",
+      "icon": "LinkedIn"
+    }
+  ],
+  "address": {
+    "line1": "901 Deming Way, Suite 202",
+    "line2": "Madison, WI 53717"
+  },
+  "copyright": "Yahara Software ©️ 2025"
+}

@@ -3,6 +3,7 @@ import { defineConfig } from "tinacms"
 import { Footer } from "./schemas/footer"
 import { Global } from "./schemas/global"
 import { Header } from "./schemas/header"
+import { Page } from "./schemas/page"
 
 // Your hosting provider likely exposes this as an environment variable
 const branch =
@@ -41,7 +42,7 @@ export default defineConfig({
       Footer,
 
       // builders
-      // Page,
+      Page,
 
       // collections
       // Resource,
