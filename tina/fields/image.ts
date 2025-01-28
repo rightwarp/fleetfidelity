@@ -1,8 +1,16 @@
 import { TinaField } from "tinacms"
 
-export const ImageField: TinaField = {
-  name: "image",
-  label: "Image",
+type ImageFieldParams = {
+  name: string
+  label: string
+}
+
+export const createImageField = ({
+  name,
+  label,
+}: ImageFieldParams): TinaField => ({
+  name,
+  label,
   type: "object",
   fields: [
     {
@@ -18,4 +26,4 @@ export const ImageField: TinaField = {
       required: true,
     },
   ],
-}
+})

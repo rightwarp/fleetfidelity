@@ -3,9 +3,6 @@ import { MetadataField } from "@tina/fields/metadata"
 import { OpenGraphField } from "@tina/fields/opengraph"
 import { Collection } from "tinacms"
 
-// import { OpenGraphField } from "../fields/opengraph"
-// import { MetadataField } from "../fields/metadata"
-
 export const Global: Collection = {
   name: "global",
   label: "Global",

@@ -1,6 +1,8 @@
 import { defineConfig } from "tinacms"
 
+import { Footer } from "./schemas/footer"
 import { Global } from "./schemas/global"
+import { Header } from "./schemas/header"
 
 // Your hosting provider likely exposes this as an environment variable
 const branch =
@@ -35,8 +37,8 @@ export default defineConfig({
     collections: [
       // singletons
       Global,
-      // Header,
-      // Footer,
+      Header,
+      Footer,
 
       // builders
       // Page,
