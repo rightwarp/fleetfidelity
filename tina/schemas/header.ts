@@ -1,4 +1,5 @@
 import { createImageField } from "@tina/fields/image"
+import { toPageLabel } from "@tina/plugins/pageLabel"
 import { Collection } from "tinacms"
 
 export const Header: Collection = {
@@ -21,7 +22,9 @@ export const Header: Collection = {
       type: "object",
       list: true,
       ui: {
-        itemProps: (item) => ({ label: item.label }),
+        itemProps: (item) => ({
+          ...toPageLabel(item),
+        }),
       },
       fields: [
         {

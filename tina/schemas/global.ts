@@ -34,8 +34,8 @@ export const Global: Collection = {
       type: "string",
     },
     {
-      name: "policies",
-      label: "Policies",
+      name: "privacyPolicy",
+      label: "Privacy Policy",
       type: "object",
       fields: [
         {
@@ -44,6 +44,13 @@ export const Global: Collection = {
           type: "rich-text",
           required: true,
         },
+      ],
+    },
+    {
+      name: "termsOfService",
+      label: "Terms of Service",
+      type: "object",
+      fields: [
         {
           name: "terms",
           label: "Terms of Service",
