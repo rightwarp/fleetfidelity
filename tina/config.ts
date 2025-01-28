@@ -1,5 +1,7 @@
 import { defineConfig } from "tinacms"
 
+import { Global } from "./schemas/global"
+
 // Your hosting provider likely exposes this as an environment variable
 const branch =
   process.env.GITHUB_BRANCH ||
@@ -31,29 +33,18 @@ export default defineConfig({
   },
   schema: {
     collections: [
-      {
-        name: "post",
-        label: "Posts",
-        path: "src/content/posts",
-        fields: [
-          {
-            type: "string",
-            name: "title",
-            label: "Title",
-            isTitle: true,
-            required: true,
-          },
-          {
-            type: "rich-text",
-            name: "body",
-            label: "Body",
-            isBody: true,
-          },
-        ],
-        ui: {
-          // router: ({ document }) => "/",
-        },
-      },
+      // singletons
+      Global,
+      // Header,
+      // Footer,
+
+      // builders
+      // Page,
+
+      // collections
+      // Resource,
+      // Testimonial,
+      // Team,
     ],
   },
 })

@@ -10,6 +10,15 @@ const nextConfig: NextConfig = {
       },
     ],
   },
+  async rewrites() {
+    return [
+      // Redirect tina admin
+      {
+        source: "/admin",
+        destination: "/admin/index.html",
+      },
+    ]
+  },
   webpack: (config) => {
     config.module.rules.push({
       test: /\.svg$/,
