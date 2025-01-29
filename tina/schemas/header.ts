@@ -15,7 +15,7 @@ export const Header: Collection = {
     },
   },
   fields: [
-    createImageField({ name: "logo", label: "Logo" }),
+    createImageField({ name: "logo", label: "Logo", required: true }),
     {
       name: "navigation",
       label: "Navigation",

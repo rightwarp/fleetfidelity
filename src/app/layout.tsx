@@ -1,6 +1,8 @@
 import classNames from "classnames"
 import { Poppins, League_Spartan } from "next/font/google"
 
+import { Layout } from "@/components/app/Layout"
+
 import "./globals.css"
 
 const leagueSpartan = League_Spartan({
@@ -11,7 +13,7 @@ const leagueSpartan = League_Spartan({
 
 const poppins = Poppins({
   variable: "--font-poppins",
-  weight: ["400", "600", "700"],
+  weight: ["100", "200", "400", "600", "700"],
   style: ["normal", "italic"],
   subsets: ["latin"],
   display: "swap",
@@ -31,7 +33,7 @@ export default function RootLayout({
           poppins.variable,
         )}
       >
-        {children}
+        <Layout>{children}</Layout>
       </body>
     </html>
   )

@@ -1,0 +1,19 @@
+import client from "@tina/__generated__/client"
+import { Header as HeaderType } from "@tina/__generated__/types"
+
+import { Footer } from "./Footer"
+import { Header } from "./Header"
+
+export const Layout = async ({ children }: { children: React.ReactNode }) => {
+  const headerQuery = await client.queries.header({
+    relativePath: "index.json",
+  })
+
+  return (
+    <>
+      <Header query={headerQuery.data.header as HeaderType} />
+      <main className="flex-grow">{children}</main>
+      <Footer />
+    </>
+  )
+}

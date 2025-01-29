@@ -48,6 +48,7 @@ export const TAILWIND_THEME: Partial<CustomThemeConfig> = {
 export const DEFAULT_THEME = {
   ...light,
   primary: "#074074",
+  "primary-content": "#ffffff",
   secondary: "#00B367",
   "base-content": "#011527",
 }
