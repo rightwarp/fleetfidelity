@@ -15,7 +15,7 @@ export const Footer: Collection = {
     },
   },
   fields: [
-    createImageField({ name: "logo", label: "Logo" }),
+    createImageField({ name: "logo", label: "Logo", required: true }),
     {
       name: "navigation",
       label: "Navigation",
@@ -56,6 +56,7 @@ export const Footer: Collection = {
       name: "contact",
       label: "Contact Methods",
       type: "object",
+      required: true,
       list: true,
       ui: {
         itemProps: (item) => ({ label: item.label }),
@@ -81,7 +82,7 @@ export const Footer: Collection = {
       type: "object",
       list: true,
       ui: {
-        itemProps: (item) => ({ label: item.icon }),
+        itemProps: (item) => ({ label: item.href }),
       },
       fields: [
         {
@@ -89,19 +90,6 @@ export const Footer: Collection = {
           label: "Href",
           type: "string",
           required: true,
-        },
-        {
-          name: "icon",
-          label: "Icon",
-          type: "string",
-          options: [
-            "Facebook",
-            "Instagram",
-            "X",
-            "LinkedIn",
-            "YouTube",
-            "Bluesky",
-          ],
         },
       ],
     },
@@ -121,6 +109,11 @@ export const Footer: Collection = {
           label: "Address Line Two",
           type: "string",
           required: true,
+        },
+        {
+          name: "mapLink",
+          label: "Map Link",
+          type: "string",
         },
       ],
     },

@@ -5,7 +5,6 @@ import cn from "classnames"
 import { CircleUser, Menu } from "lucide-react"
 import Image from "next/image"
 import Link from "next/link"
-import { usePathname } from "next/navigation"
 import { HTMLAttributes, useCallback, useEffect, useState } from "react"
 
 import { getRoute } from "@/utils/helpers"
@@ -21,9 +20,6 @@ const DesktopNavigation = ({
   navigation: HeaderType["navigation"]
 }) => {
   const isLargeSize = useIsLarge()
-  const pathname = usePathname()
-
-  console.log(pathname)
 
   return (
     <ul className="flex gap-2">
