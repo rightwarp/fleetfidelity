@@ -1,3 +1,19 @@
+## Fleet Fidelity Documentation
+
+### Overview
+
+Overview of website & architecture
+
+### Content
+
+Overview of managing content
+
+### Architecture
+
+Overview of website structure
+
+## Next JS Documentation
+
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
 ## Getting Started
