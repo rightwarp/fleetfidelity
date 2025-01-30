@@ -5,6 +5,7 @@ import { HomeHero } from "@tina/blocks/HomeHero"
 import { IconGrid } from "@tina/blocks/IconGrid"
 import { KeyBenefits } from "@tina/blocks/KeyBenefits"
 import { Testimonials } from "@tina/blocks/Testimonials"
+import { WYSIWYG } from "@tina/blocks/WYSIWYG"
 import { MetadataField } from "@tina/fields/metadata"
 import { OpenGraphField } from "@tina/fields/opengraph"
 import { slugify } from "@tina/plugins/slugify"
@@ -48,6 +49,7 @@ export const Page: Collection = {
         Testimonials,
         KeyBenefits,
         IconGrid,
+        WYSIWYG,
       ],
     },
   ],

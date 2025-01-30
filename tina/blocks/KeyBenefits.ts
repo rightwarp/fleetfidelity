@@ -12,8 +12,8 @@ export const KeyBenefits: Template = {
       required: true,
     },
     {
-      name: "items",
-      label: "Items",
+      name: "benefits",
+      label: "Benefits",
       type: "object",
       list: true,
       required: true,

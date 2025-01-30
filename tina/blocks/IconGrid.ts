@@ -35,8 +35,8 @@ export const IconGrid: Template = {
       type: "boolean",
     },
     {
-      name: "items",
-      label: "Items",
+      name: "icons",
+      label: "Icons",
       type: "object",
       list: true,
       required: true,
