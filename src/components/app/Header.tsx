@@ -56,7 +56,7 @@ const DesktopNavigation = ({
           case "secondary":
           default:
             element = (
-              <a
+              <Link
                 href={href}
                 className={cn("btn md:btn-sm lg:btn-md", {
                   "btn-primary": item.actionType === "primary",
@@ -64,7 +64,7 @@ const DesktopNavigation = ({
                 })}
               >
                 {item.label}
-              </a>
+              </Link>
             )
         }
 
@@ -81,9 +81,11 @@ const DesktopNavigation = ({
 const MobileNavigation = ({
   menuOpen,
   navigation,
+  handleClick,
 }: {
   menuOpen: boolean
   navigation: HeaderType["navigation"]
+  handleClick: () => void
 }) => {
   return (
     <nav
@@ -112,10 +114,10 @@ const MobileNavigation = ({
 
             return (
               <li key={item.label}>
-                <a
+                <Link
                   href={href}
                   className={cn(
-                    "flex items-center justify-center gap-2 border-b border-base-300 py-3 font-semibold",
+                    "flex items-center justify-center gap-2 border-b border-base-300 py-2 font-semibold",
                     {
                       "bg-base-100 text-base-content hover:bg-base-200":
                         item.actionType !== "login",
@@ -123,10 +125,13 @@ const MobileNavigation = ({
                         item.actionType === "login",
                     },
                   )}
+                  onClick={
+                    item.actionType === "login" ? undefined : handleClick
+                  }
                 >
                   {item.actionType === "login" && <CircleUser size={20} />}{" "}
                   {item.label}
-                </a>
+                </Link>
               </li>
             )
           })}
@@ -149,6 +154,10 @@ export const Header = ({ query }: Headerprops) => {
     setMenuOpen(!menuOpen)
   }, [menuOpen])
 
+  const closeMenu = useCallback(() => {
+    setMenuOpen(false)
+  }, [])
+
   const contactItem = query.navigation?.find(
     (item) => item?.pageRef?._sys.filename === "contact",
   )
@@ -157,7 +166,7 @@ export const Header = ({ query }: Headerprops) => {
   return (
     <header>
       <div className="flex items-center justify-between bg-base-200 px-3 py-2 md:px-16">
-        <Link href="/">
+        <Link href="/" onClick={closeMenu}>
           <Image
             priority
             src={query.logo.src}
@@ -178,9 +187,13 @@ export const Header = ({ query }: Headerprops) => {
           className="inline-flex gap-2 md:hidden"
         >
           {!isMediumSize && contactItem && (
-            <a href={contactHref} className="btn btn-primary btn-xs sm:btn-sm">
+            <Link
+              href={contactHref}
+              className="btn btn-primary btn-xs sm:btn-sm"
+              onClick={closeMenu}
+            >
               {contactItem.label}
-            </a>
+            </Link>
           )}
           <button
             type="button"
@@ -192,7 +205,11 @@ export const Header = ({ query }: Headerprops) => {
         </div>
       </div>
       {!isMediumSize && (
-        <MobileNavigation menuOpen={menuOpen} navigation={query.navigation} />
+        <MobileNavigation
+          menuOpen={menuOpen}
+          navigation={query.navigation}
+          handleClick={handleMenuOpen}
+        />
       )}
     </header>
   )

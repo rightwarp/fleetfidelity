@@ -3,6 +3,7 @@
 import { Footer as FooterType } from "@tina/__generated__/types"
 import { Mail, Phone, MapPin, LucideIcon, Copyright } from "lucide-react"
 import Image from "next/image"
+import Link from "next/link"
 import { HTMLAttributes } from "react"
 import { SocialIcon } from "react-social-icons"
 
@@ -103,11 +104,13 @@ export const Footer = ({ query }: FooterProps) => {
               const href =
                 navItem.href || getRoute(navItem.pageRef?._sys.filename)
 
+              const Tag = navItem.href ? "a" : Link
+
               return (
                 <li key={navItem.label}>
-                  <a href={href} className="hover:link">
+                  <Tag href={href} className="hover:link">
                     {navItem.label}
-                  </a>
+                  </Tag>
                 </li>
               )
             })}
