@@ -68,7 +68,11 @@ const DesktopNavigation = ({
             )
         }
 
-        return <li key={item.label}>{element}</li>
+        return (
+          <li key={item.label} className="flex items-center">
+            {element}
+          </li>
+        )
       })}
     </ul>
   )

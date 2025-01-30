@@ -1,0 +1,9 @@
+{
+  "quote": "Test quote",
+  "name": "Serena Van Der Woodsen",
+  "title": "CEO, Cool Company",
+  "portrait": {
+    "src": "/uploads/2025-01-16 19_03_32-KINGDOM HEARTS III.png",
+    "alt": "John Doe"
+  }
+}
