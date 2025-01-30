@@ -35,7 +35,7 @@ export const Footer = ({ query }: FooterProps) => {
           />
         </div>
         <div className="flex items-center text-sm md:text-base">
-          <span>
+          <span className="flex items-center gap-1">
             {query.tagline} <YaharaIcon className="inline" />
           </span>
         </div>

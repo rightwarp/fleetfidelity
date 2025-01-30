@@ -21,7 +21,7 @@ export const Page: Collection = {
     {
       name: "title",
       label: "Title",
-      description: "The title used by the CMS",
+      description: "The title displayed in the CMS",
       type: "string",
       isTitle: true,
       required: true,

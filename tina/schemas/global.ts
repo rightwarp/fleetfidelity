@@ -33,31 +33,5 @@ export const Global: Collection = {
         "Learn more: https://support.google.com/analytics/answer/9539598?hl=en",
       type: "string",
     },
-    {
-      name: "privacyPolicy",
-      label: "Privacy Policy",
-      type: "object",
-      fields: [
-        {
-          name: "privacy",
-          label: "Privacy Policy",
-          type: "rich-text",
-          required: true,
-        },
-      ],
-    },
-    {
-      name: "termsOfService",
-      label: "Terms of Service",
-      type: "object",
-      fields: [
-        {
-          name: "terms",
-          label: "Terms of Service",
-          type: "rich-text",
-          required: true,
-        },
-      ],
-    },
   ],
 }
