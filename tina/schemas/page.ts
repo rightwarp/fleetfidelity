@@ -2,7 +2,8 @@ import { CallToAction } from "@tina/blocks/CallToAction"
 import { CostSavings } from "@tina/blocks/CostSavings"
 import { Hero } from "@tina/blocks/Hero"
 import { HomeHero } from "@tina/blocks/HomeHero"
-import { ROIContributors } from "@tina/blocks/ROIContributors"
+import { IconGrid } from "@tina/blocks/IconGrid"
+import { KeyBenefits } from "@tina/blocks/KeyBenefits"
 import { Testimonials } from "@tina/blocks/Testimonials"
 import { MetadataField } from "@tina/fields/metadata"
 import { OpenGraphField } from "@tina/fields/opengraph"
@@ -40,12 +41,13 @@ export const Page: Collection = {
       type: "object",
       list: true,
       templates: [
+        CallToAction,
         HomeHero,
         Hero,
-        ROIContributors,
         CostSavings,
         Testimonials,
-        CallToAction,
+        KeyBenefits,
+        IconGrid,
       ],
     },
   ],

@@ -1,9 +1,9 @@
 import { createImageField } from "@tina/fields/image"
 import { Template } from "tinacms"
 
-export const ROIContributors: Template = {
-  name: "roiContributors",
-  label: "ROI Contributors",
+export const KeyBenefits: Template = {
+  name: "keyBenefits",
+  label: "Key Benefits",
   fields: [
     {
       name: "heading",
@@ -21,7 +21,7 @@ export const ROIContributors: Template = {
         itemProps: (item) => ({ label: item.title }),
       },
       fields: [
-        createImageField({ name: "icon", label: "Icon", required: true }),
+        createImageField({ name: "image", label: "Image", required: true }),
         {
           name: "title",
           label: "Title",

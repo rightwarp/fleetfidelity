@@ -7,7 +7,7 @@ export const Testimonials: Template = {
   fields: [
     {
       name: "isHidden",
-      label: "Hidden",
+      label: "Is Hidden",
       description: "Toggle to hide this block from the page",
       type: "boolean",
     },

@@ -41,7 +41,7 @@ export const CallToAction: Template = {
         },
         {
           name: "isExternal",
-          label: "External",
+          label: "Is External Link",
           type: "boolean",
         },
         {
