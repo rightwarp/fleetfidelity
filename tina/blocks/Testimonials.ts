@@ -22,7 +22,6 @@ export const Testimonials: Template = {
       label: "Testimonials",
       type: "object",
       list: true,
-      required: true,
       ui: {
         itemProps: (item) => ({ ...toReferenceLabel(item.testimonialRef) }),
       },

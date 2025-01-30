@@ -9,7 +9,7 @@ export const IconGrid: Template = {
       name: "theme",
       label: "Theme",
       type: "string",
-      options: ["primary", "default"],
+      options: ["Primary", "Default"],
     },
     {
       name: "heading",
@@ -21,13 +21,13 @@ export const IconGrid: Template = {
       name: "iconLayout",
       label: "Icon Layout Orientation",
       type: "string",
-      options: ["vertical", "horizontal"],
+      options: ["Vertical", "Horizontal"],
     },
     {
       name: "iconSize",
       label: "Icon Size",
       type: "string",
-      options: ["normal", "display"],
+      options: ["Normal", "Large"],
     },
     {
       name: "hasIconBadge",
@@ -67,7 +67,7 @@ export const IconGrid: Template = {
       name: "bottomTextStyle",
       label: "Bottom Text Style",
       type: "string",
-      options: ["normal", "callout"],
+      options: ["Normal", "Callout"],
     },
   ],
 }

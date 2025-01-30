@@ -1,7 +1,9 @@
 "use client"
 
-import { PageQuery } from "@tina/__generated__/types"
+import { Page, PageQuery } from "@tina/__generated__/types"
 import { useTina } from "tinacms/dist/react"
+
+import { Blocks } from "@/components/blocks"
 
 export interface ClientPageProps {
   data: {
@@ -16,9 +18,5 @@ export interface ClientPageProps {
 export const ClientPage = (props: ClientPageProps) => {
   const { data } = useTina({ ...props })
 
-  return (
-    <div>
-      <h1>{data.page?.title}</h1>
-    </div>
-  )
+  return <Blocks {...(data.page as Page)} />
 }

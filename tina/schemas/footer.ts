@@ -35,8 +35,8 @@ export const Footer: Collection = {
         },
         {
           name: "href",
-          label: "Href",
-          description: "Use when the link is external",
+          label: "External Link",
+          description: "Overrides page link, e.g. for an external website",
           type: "string",
         },
         {
@@ -87,7 +87,7 @@ export const Footer: Collection = {
       fields: [
         {
           name: "href",
-          label: "Href",
+          label: "Link",
           type: "string",
           required: true,
         },

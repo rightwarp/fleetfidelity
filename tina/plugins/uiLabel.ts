@@ -3,6 +3,6 @@
  */
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
-export const toUiLabel = (item: Record<string, any>) => {
-  return { label: item.label }
+export const toUiLabel = (item: Record<string, any>, property = "label") => {
+  return { label: item[property] }
 }

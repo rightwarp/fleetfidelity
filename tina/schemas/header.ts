@@ -35,8 +35,8 @@ export const Header: Collection = {
         },
         {
           name: "href",
-          label: "Href",
-          description: "Use when the link is external",
+          label: "External Link",
+          description: "Overrides page link, e.g. for an external website",
           type: "string",
         },
         {
@@ -49,7 +49,7 @@ export const Header: Collection = {
           name: "actionType",
           label: "Action Type",
           type: "string",
-          options: ["primary", "secondary", "login"],
+          options: ["Primary", "Secondary", "Login"],
         },
       ],
     },

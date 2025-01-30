@@ -13,6 +13,12 @@ interface Headerprops extends HTMLAttributes<HTMLElement> {
   query: HeaderType
 }
 
+const ActionTypes = {
+  PRIMARY: "Primary",
+  SECONDARY: "Secondary",
+  LOGIN: "Login",
+}
+
 const DesktopNavigation = ({
   navigation,
 }: {
@@ -29,7 +35,7 @@ const DesktopNavigation = ({
         let element: React.ReactNode
 
         switch (item.actionType) {
-          case "login":
+          case ActionTypes.LOGIN:
             element = (
               <a
                 href={href}
@@ -52,15 +58,15 @@ const DesktopNavigation = ({
               </a>
             )
             break
-          case "primary":
-          case "secondary":
+          case ActionTypes.PRIMARY:
+          case ActionTypes.SECONDARY:
           default:
             element = (
               <Link
                 href={href}
                 className={cn("btn md:btn-sm lg:btn-md", {
-                  "btn-primary": item.actionType === "primary",
-                  "btn-ghost": item.actionType === "secondary",
+                  "btn-primary": item.actionType === ActionTypes.PRIMARY,
+                  "btn-ghost": item.actionType === ActionTypes.SECONDARY,
                 })}
               >
                 {item.label}
@@ -120,16 +126,20 @@ const MobileNavigation = ({
                     "flex items-center justify-center gap-2 border-b border-base-300 py-2 font-semibold",
                     {
                       "bg-base-100 text-base-content hover:bg-base-200":
-                        item.actionType !== "login",
+                        item.actionType !== ActionTypes.LOGIN,
                       "bg-navy-800 text-white hover:bg-navy-900":
-                        item.actionType === "login",
+                        item.actionType === ActionTypes.LOGIN,
                     },
                   )}
                   onClick={
-                    item.actionType === "login" ? undefined : handleClick
+                    item.actionType === ActionTypes.LOGIN
+                      ? undefined
+                      : handleClick
                   }
                 >
-                  {item.actionType === "login" && <CircleUser size={20} />}{" "}
+                  {item.actionType === ActionTypes.LOGIN && (
+                    <CircleUser size={20} />
+                  )}{" "}
                   {item.label}
                 </Link>
               </li>
