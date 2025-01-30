@@ -7,25 +7,25 @@
     {
       "label": "Home",
       "href": "",
-      "pageRef": "src/content/pages/home.json",
+      "pageRef": "src/content/pages/home.mdx",
       "actionType": "secondary"
     },
     {
       "label": "About",
       "href": "",
-      "pageRef": "src/content/pages/about.json",
+      "pageRef": "src/content/pages/about.mdx",
       "actionType": "secondary"
     },
     {
       "label": "Resources",
       "href": "",
-      "pageRef": "src/content/pages/resources.json",
+      "pageRef": "src/content/pages/resources.mdx",
       "actionType": "secondary"
     },
     {
       "label": "Schedule A Demo",
       "href": "",
-      "pageRef": "src/content/pages/contact.json",
+      "pageRef": "src/content/pages/contact.mdx",
       "actionType": "primary"
     },
     {

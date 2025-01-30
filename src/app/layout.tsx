@@ -1,7 +1,7 @@
-import classNames from "classnames"
 import { Poppins, League_Spartan } from "next/font/google"
 
 import { Layout } from "@/components/app/Layout"
+import { cn } from "@/utils/helpers"
 
 import "./globals.css"
 
@@ -27,11 +27,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={classNames(
-          "antialiased",
-          leagueSpartan.variable,
-          poppins.variable,
-        )}
+        className={cn("antialiased", leagueSpartan.variable, poppins.variable)}
       >
         <Layout>{children}</Layout>
       </body>

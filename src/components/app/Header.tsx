@@ -1,13 +1,12 @@
 "use client"
 
 import { Header as HeaderType } from "@tina/__generated__/types"
-import cn from "classnames"
 import { CircleUser, Menu } from "lucide-react"
 import Image from "next/image"
 import Link from "next/link"
 import { HTMLAttributes, useCallback, useEffect, useState } from "react"
 
-import { getRoute } from "@/utils/helpers"
+import { cn, getRoute } from "@/utils/helpers"
 import { useIsLarge, useIsMedium } from "@/utils/useMediaQuery"
 
 interface Headerprops extends HTMLAttributes<HTMLElement> {
@@ -116,7 +115,7 @@ const MobileNavigation = ({
                     {
                       "bg-base-100 text-base-content hover:bg-base-200":
                         item.actionType !== "login",
-                      "bg-navy-800 hover:bg-navy-900 text-white":
+                      "bg-navy-800 text-white hover:bg-navy-900":
                         item.actionType === "login",
                     },
                   )}

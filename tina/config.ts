@@ -7,6 +7,7 @@ import { Page } from "./schemas/page"
 
 // Your hosting provider likely exposes this as an environment variable
 const branch =
+  process.env.NEXT_PUBLIC_TINA_BRANCH ||
   process.env.GITHUB_BRANCH ||
   process.env.VERCEL_GIT_COMMIT_REF ||
   process.env.HEAD ||

@@ -7,7 +7,7 @@ export const Page: Collection = {
   name: "page",
   label: "Pages",
   path: "src/content/pages",
-  format: "json",
+  format: "mdx",
   ui: {
     // router: ({ document }) => {
     //   if (document._sys.filename === "home") {

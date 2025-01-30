@@ -1,7 +1,6 @@
 "use client"
 
 import { Footer as FooterType } from "@tina/__generated__/types"
-import cn from "classnames"
 import { Mail, Phone, MapPin, LucideIcon, Copyright } from "lucide-react"
 import Image from "next/image"
 import { HTMLAttributes } from "react"
@@ -9,7 +8,7 @@ import { SocialIcon } from "react-social-icons"
 
 // import Instagram from "@/app/_assets/instagram.svg"
 import YaharaIcon from "@/app/_assets/yahara-icon.svg"
-import { getRoute } from "@/utils/helpers"
+import { cn, getRoute } from "@/utils/helpers"
 
 interface FooterProps extends HTMLAttributes<HTMLElement> {
   query: FooterType
