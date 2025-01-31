@@ -6,6 +6,7 @@ import { Hero } from "@tina/blocks/Hero"
 import { HomeHero } from "@tina/blocks/HomeHero"
 import { IconGrid } from "@tina/blocks/IconGrid"
 import { KeyBenefits } from "@tina/blocks/KeyBenefits"
+import { Resources } from "@tina/blocks/Resources"
 import { Team } from "@tina/blocks/Team"
 import { Testimonials } from "@tina/blocks/Testimonials"
 import { WYSIWYG } from "@tina/blocks/WYSIWYG"
@@ -63,6 +64,7 @@ export const Page: Collection = {
         Team,
 
         // resources
+        Resources,
 
         // contact
       ],

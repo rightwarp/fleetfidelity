@@ -1,14 +1,121 @@
 ---
 title: About
+seo:
+  metaTitle: About Us
+  metaDescription: Bringing clarity to fleet management
+  url: /about
 blocks:
   - heading: |
-      Meet The Team
+      ## **About Us**
+    _template: hero
+  - content: "## Bringing Clarity to Fleet Management\n\nFleets generate more data than ever before. ELDs, cameras, maintenance reports, compliance systems, insurance records—it's a lot to manage.\L\LInstead of making operations easier, all this information often feels disorganized and disconnected, leaving fleet managers struggling to keep up.\L\LWe saw fleets spending hours searching through different systems, trying to track safety risks, compliance issues, and performance metrics. Instead of using data to improve operations, many were just trying to manage the chaos.\L\LThat’s why we built FleetFidelity. Our platform brings all your fleet data together so you can track, analyze, and act on the information that matters most.\n"
+    bgImage:
+      src: /uploads/company-story-bg.svg
+    _template: companyStory
+  - heading: |
+      ## What Drives Us
+
+      At FleetFidelity, we believe:
+    beliefs:
+      - Fleets shouldn’t have to waste time searching for answers
+      - The right insights can prevent accidents
+      - 'Technology should simplify fleet management, not make it harder'
+      - 'Data should work for fleets, not the other way around'
+    _template: beliefs
+  - theme: Default
+    heading: >
+      ## How We Help
+
+
+      FleetFidelity is a data intelligence platform designed for transportation
+      companies. We connect with ELDs, cameras, maintenance software, and
+      compliance tools to create a single source of truth for fleet operations.
+    iconLayout: Horizontal
+    iconSize: Normal
+    icons:
+      - icon:
+          src: /uploads/target-correct-blue--Streamline-Ultimate.svg
+          alt: Identify risk icon
+        title: Identifying Safety Risks
+        description: Before it turns into costly accidents
+      - icon:
+          src: /uploads/legal-certificate--Streamline-Ultimate.svg
+          alt: Compliance icon
+        title: Improving Compliance
+        description: Make regulations easier to track
+      - icon:
+          src: /uploads/coupon-cut--Streamline-Ultimate.svg
+          alt: Cut costs icon
+        title: Reducing Operational Costs
+        description: Apply smarter decision making to maximize cost efficiency
+      - icon:
+          src: /uploads/human-resources-rating-woman--Streamline-Ultimate.svg
+          alt: People icon
+        title: Retaining Drivers
+        description: Offer better coaching and performance tracking
+    bottomText: >
+      We don’t replace the tools fleets already use—we make them work better
+      together.
+    _template: iconGrid
+  - heading: |
+      ## The Team Behind FleetFidelity
     groups:
       - title: Leadership
         members:
           - memberRef: src/content/team/laura-omdahl.json
+          - memberRef: src/content/team/clay-merches.json
+          - memberRef: src/content/team/chad-mckee.json
+          - memberRef: src/content/team/rusty-weiss.json
       - title: Advisory Board - Yahara Software
         members:
+          - memberRef: src/content/team/kevin-meech.json
           - memberRef: src/content/team/garrett-peterson.json
+          - memberRef: src/content/team/adam-steinert.json
     _template: team
+  - theme: Primary
+    heading: >
+      ## **What’s Next?**
+
+
+      Fleet management is evolving, and FleetFidelity is helping companies stay
+      ahead.
+
+
+      **We’re building a future where fleets can:**
+    iconLayout: Vertical
+    iconSize: Normal
+    hasIconBadge: false
+    icons:
+      - icon:
+          src: /uploads/timer--Streamline-Ultimate.svg
+          alt: Real time icon
+        title: Make Smarter Decisions With Real-Time Data
+      - icon:
+          src: /uploads/safety-float--Streamline-Ultimate.svg
+          alt: Prevent accidents icon
+        title: Prevent Accidents Before They Happen
+      - icon:
+          src: /uploads/accounting-invoice-hand--Streamline-Ultimate.svg
+          alt: Cut inefficiencies icon
+        title: Cut inefficiencies and stay focused on what really matters
+      - icon:
+          src: /uploads/business-contract-approve--Streamline-Ultimate.svg
+          alt: Accountability icon
+        title: 'Build a culture of safety, accountability, and smart decision-making'
+    bottomText: >
+      We built FleetFidelity to solve real problems for real fleets. If that
+      sounds like something your team needs, **we'd love to connect.**
+    _template: iconGrid
+  - theme: Default
+    heading: |
+      See FleetFidelity In Action
+    actions:
+      - label: Schedule A Demo
+        pageRef: src/content/pages/contact.mdx
+        type: Primary
+      - label: Follow Us On LinkedIn
+        href: 'https://www.linkedin.com/company/yahara-software'
+        type: Secondary
+    _template: callToAction
 ---
+

@@ -8,7 +8,7 @@ export const Resource: Collection = {
   path: "src/content/resources",
   format: "json",
   ui: {
-    ...slugify("type"),
+    ...slugify("title"),
   },
   fields: [
     {
@@ -21,13 +21,14 @@ export const Resource: Collection = {
       name: "type",
       label: "Type",
       type: "string",
-      isTitle: true,
+      options: ["White Paper", "Case Study"],
       required: true,
     },
     {
       name: "title",
       label: "Title",
       type: "string",
+      isTitle: true,
       required: true,
     },
     {

@@ -6,8 +6,8 @@ export const CompanyStory: Template = {
   label: "Company Story",
   fields: [
     {
-      name: "body",
-      label: "Body",
+      name: "content",
+      label: "Content",
       type: "rich-text",
       required: true,
     },

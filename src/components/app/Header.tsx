@@ -183,7 +183,7 @@ export const Header = ({ query }: Headerprops) => {
             width={160}
             height={18}
             className="w-[7rem] md:w-[10rem] lg:w-[14rem]"
-            alt={query.logo.alt}
+            alt={query.logo.alt || ""}
           />
         </Link>
         <nav

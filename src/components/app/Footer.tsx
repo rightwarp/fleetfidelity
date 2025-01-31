@@ -32,7 +32,7 @@ export const Footer = ({ query }: FooterProps) => {
             width={160}
             height={18}
             className="w-[10rem] lg:w-[14rem]"
-            alt={query.logo.alt}
+            alt={query.logo.alt || ""}
           />
         </div>
         <div className="flex items-center text-sm md:text-base">

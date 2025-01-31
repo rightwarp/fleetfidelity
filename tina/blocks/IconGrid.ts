@@ -63,11 +63,5 @@ export const IconGrid: Template = {
       label: "Bottom Text",
       type: "rich-text",
     },
-    {
-      name: "bottomTextStyle",
-      label: "Bottom Text Style",
-      type: "string",
-      options: ["Normal", "Callout"],
-    },
   ],
 }
