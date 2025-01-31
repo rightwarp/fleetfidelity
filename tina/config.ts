@@ -5,6 +5,8 @@ import { Global } from "./schemas/global"
 import { Header } from "./schemas/header"
 import { Page } from "./schemas/page"
 import { Testimonial } from "./schemas/testimonial"
+import { Resource } from "./schemas/resource"
+import { Team } from "./schemas/team"
 
 // Your hosting provider likely exposes this as an environment variable
 const branch =
@@ -46,10 +48,10 @@ export default defineConfig({
       // builders
       Page,
 
-      // collections
+      // shared
       Testimonial,
-      // Resource,
-      // Team,
+      Resource,
+      Team,
     ],
   },
 })

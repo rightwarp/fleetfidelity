@@ -1,9 +1,12 @@
+import { Beliefs } from "@tina/blocks/Beliefs"
 import { CallToAction } from "@tina/blocks/CallToAction"
+import { CompanyStory } from "@tina/blocks/CompanyStory"
 import { CostSavings } from "@tina/blocks/CostSavings"
 import { Hero } from "@tina/blocks/Hero"
 import { HomeHero } from "@tina/blocks/HomeHero"
 import { IconGrid } from "@tina/blocks/IconGrid"
 import { KeyBenefits } from "@tina/blocks/KeyBenefits"
+import { Team } from "@tina/blocks/Team"
 import { Testimonials } from "@tina/blocks/Testimonials"
 import { WYSIWYG } from "@tina/blocks/WYSIWYG"
 import { MetadataField } from "@tina/fields/metadata"
@@ -42,14 +45,26 @@ export const Page: Collection = {
       type: "object",
       list: true,
       templates: [
+        // shared
         CallToAction,
-        HomeHero,
+        IconGrid,
+        WYSIWYG,
         Hero,
+
+        // home
+        HomeHero,
         CostSavings,
         Testimonials,
         KeyBenefits,
-        IconGrid,
-        WYSIWYG,
+
+        // about
+        CompanyStory,
+        Beliefs,
+        Team,
+
+        // resources
+
+        // contact
       ],
     },
   ],

@@ -26,7 +26,6 @@ export const createImageField = ({
       name: "alt",
       label: "Alt Text",
       type: "string",
-      required: true,
     },
   ],
 })
