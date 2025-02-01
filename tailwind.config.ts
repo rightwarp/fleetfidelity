@@ -6,7 +6,10 @@ import type { Config } from "tailwindcss"
 import { TAILWIND_THEME, DEFAULT_THEME } from "./config/tailwind"
 
 export default {
-  content: ["./src/**/*.{js,ts,jsx,tsx,mdx}", "./tina/**/*.{js,ts,jsx,tsx,mdx}"],
+  content: [
+    "./src/**/*.{js,ts,jsx,tsx,mdx}",
+    "./tina/**/*.{js,ts,jsx,tsx,mdx}",
+  ],
   theme: { extend: TAILWIND_THEME },
   plugins: [TailwindTypography, TailwindForms, DaisyUI],
   daisyui: {

@@ -4,11 +4,10 @@ import { Footer } from "./schemas/footer"
 import { Global } from "./schemas/global"
 import { Header } from "./schemas/header"
 import { Page } from "./schemas/page"
-import { Testimonial } from "./schemas/testimonial"
 import { Resource } from "./schemas/resource"
 import { Team } from "./schemas/team"
+import { Testimonial } from "./schemas/testimonial"
 
-// Your hosting provider likely exposes this as an environment variable
 const branch =
   process.env.NEXT_PUBLIC_TINA_BRANCH ||
   process.env.GITHUB_BRANCH ||

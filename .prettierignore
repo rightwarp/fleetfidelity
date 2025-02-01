@@ -4,10 +4,12 @@ next.config.ts
 
 # next
 .next
+out
 .cache
 node_modules
 
 # tina
+src/content
 public/admin
 tina/__generated__
 tina/tina-lock.json
