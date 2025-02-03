@@ -57,7 +57,11 @@ export const HomeHero = ({ heading, actions, images }: PageBlocksHomeHero) => {
   }, [images])
 
   return (
-    <Container tag="section">
+    <Container
+      tag="section"
+      className="pb-12 pt-12 sm:overflow-hidden sm:pb-0 lg:pt-24"
+      isCollapsed
+    >
       <div className="flex flex-col gap-5 text-center md:gap-8">
         <TinaMarkdown
           content={heading}
@@ -77,7 +81,7 @@ export const HomeHero = ({ heading, actions, images }: PageBlocksHomeHero) => {
           })}
         </div>
       </div>
-      <div className="relative">
+      <div className="relative sm:h-72 md:h-80 lg:h-96 xl:h-[600px]">
         <div
           className="absolute -right-48 -top-[100px] -z-10 sm:-top-8 sm:left-0 sm:right-[unset]"
           aria-hidden="true"
