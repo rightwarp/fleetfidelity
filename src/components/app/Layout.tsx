@@ -18,7 +18,7 @@ export const Layout = async ({ children }: { children: React.ReactNode }) => {
   return (
     <>
       <Header query={headerQuery.data.header as HeaderType} />
-      <main className="flex-grow">{children}</main>
+      <main>{children}</main>
       <Footer query={footerQuery.data.footer as FooterType} />
     </>
   )

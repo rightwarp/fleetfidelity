@@ -53,6 +53,9 @@ export const HomeHero: Template = {
       type: "object",
       list: true,
       required: true,
+      ui: {
+        itemProps: (item) => ({ ...toUiLabel(item, "alt") }),
+      },
       fields: [
         {
           name: "src",
