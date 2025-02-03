@@ -16,7 +16,7 @@ import { HomeHeroHeadingMarkdownComponents } from "../app/MarkdownComponents"
 
 const variants = {
   enter: {
-    x: 100,
+    x: 25,
     opacity: 0,
   },
   center: {
@@ -26,7 +26,7 @@ const variants = {
   },
   exit: {
     zIndex: 0,
-    x: -100,
+    x: -25,
     opacity: 0,
   },
 }

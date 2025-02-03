@@ -96,7 +96,7 @@ const MobileNavigation = ({
   return (
     <nav
       className={cn(
-        "grid grid-rows-[0fr] overflow-hidden bg-base-100 transition-[grid-template-rows] duration-500 md:hidden",
+        "absolute grid w-full grid-rows-[0fr] overflow-hidden bg-base-100 transition-[grid-template-rows] duration-500 md:hidden",
         {
           "grid-rows-[1fr]": menuOpen,
         },
@@ -174,7 +174,7 @@ export const Header = ({ query }: Headerprops) => {
   const contactHref = getRoute(contactItem?.pageRef?._sys.filename)
 
   return (
-    <header>
+    <header className="sticky top-0">
       <div className="flex items-center justify-between bg-base-200 px-3 py-2 md:px-16">
         <Link href="/" onClick={closeMenu}>
           <Image
