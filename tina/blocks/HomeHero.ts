@@ -18,6 +18,8 @@ export const HomeHero: Template = {
       list: true,
       required: true,
       ui: {
+        min: 1,
+        max: 2,
         itemProps: (item) => ({ ...toUiLabel(item) }),
       },
       fields: [
@@ -44,6 +46,42 @@ export const HomeHero: Template = {
           label: "Type",
           type: "string",
           options: ["Primary", "Secondary"],
+        },
+      ],
+    },
+    {
+      name: "features",
+      label: "Features",
+      type: "object",
+      required: true,
+      list: true,
+      ui: {
+        min: 2,
+        max: 4,
+        itemProps: (item) => ({ ...toUiLabel(item, "label") }),
+      },
+      fields: [
+        {
+          name: "icon",
+          label: "Icon",
+          type: "string",
+          options: [
+            "LayoutDashboard",
+            "UserCog",
+            "ListChecks",
+            "ShieldCheck",
+            "Truck",
+            "CircleCheck",
+            "Settings",
+            "ChartNetwork",
+          ],
+          required: true,
+        },
+        {
+          name: "label",
+          label: "Label",
+          type: "string",
+          required: true,
         },
       ],
     },
