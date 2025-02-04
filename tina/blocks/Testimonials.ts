@@ -18,6 +18,12 @@ export const Testimonials: Template = {
       required: true,
     },
     {
+      name: "transitionDelay",
+      label: "Transition Delay",
+      type: "number",
+      description: "The delay between testimonial transitions (in seconds)",
+    },
+    {
       name: "testimonials",
       label: "Testimonials",
       type: "object",

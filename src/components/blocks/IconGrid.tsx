@@ -135,7 +135,7 @@ export const IconGrid = ({
               >
                 <h3
                   className={cn(
-                    "z-10 font-heading text-xl font-semibold sm:text-2xl",
+                    "z-10 font-heading text-lg font-semibold sm:text-xl",
                     {
                       "text-white": theme === Themes.PRIMARY,
                       "text-black": theme === Themes.DEFAULT,

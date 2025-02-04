@@ -10,7 +10,7 @@ export const HeadingMarkdownComponents: MarkdownComponentsType = {
     <h1
       {...props}
       className={cn(
-        "font-heading text-3xl leading-[100%] tracking-tight text-black md:text-5xl lg:text-[3.75rem]",
+        "font-heading text-3xl !leading-[100%] tracking-tight text-black md:text-5xl lg:text-[3.75rem]",
         className,
       )}
     />
@@ -19,7 +19,7 @@ export const HeadingMarkdownComponents: MarkdownComponentsType = {
     <h2
       {...props}
       className={cn(
-        "mx-auto mb-8 max-w-[60rem] font-heading text-2xl leading-[100%] tracking-tight text-black md:text-4xl lg:mb-12 lg:text-[3rem]",
+        "mx-auto mb-8 max-w-[60rem] font-heading text-2xl !leading-[100%] tracking-tight text-black md:text-4xl lg:mb-8 lg:text-[3rem]",
         className,
       )}
     />
@@ -41,12 +41,12 @@ export const HomeHeroHeadingMarkdownComponents: MarkdownComponentsType = {
   h1: (props) =>
     HeadingMarkdownComponents.h1({
       ...props,
-      className: cn("mx-auto mb-8 max-w-[60rem] lg:mb-12"),
+      className: cn("mx-auto mb-6 max-w-[60rem] md:mb-8"),
     }),
   p: (props) => (
     <p
       {...props}
-      className="mx-auto mb-8 max-w-[50rem] text-base md:text-xl lg:mb-12"
+      className="mx-auto mb-6 max-w-[50rem] text-base md:mb-8 md:text-xl"
     />
   ),
 }
@@ -59,8 +59,4 @@ export const PrimarySectionHeadingMarkdownComponents: MarkdownComponentsType = {
       className: cn("text-white"),
     }),
   p: (props) => <p {...props} className="text-primary-content" />,
-}
-
-export const DefaultSectionHeadingMarkdownComponents: MarkdownComponentsType = {
-  ...HeadingMarkdownComponents,
 }

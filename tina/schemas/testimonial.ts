@@ -16,6 +16,9 @@ export const Testimonial: Collection = {
       label: "Quote",
       type: "string",
       required: true,
+      ui: {
+        component: "textarea",
+      },
     },
     {
       name: "name",

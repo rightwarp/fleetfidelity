@@ -128,7 +128,7 @@ export const HomeHero = ({
           })}
         </div>
       </div>
-      <ul className="mx-auto mb-6 grid grid-cols-2 gap-4 sm:max-w-[75%] md:max-w-[70%] lg:max-w-[60%] xl:max-w-[50%] 2xl:max-w-[40%]">
+      <ul className="mx-auto mb-6 grid grid-cols-2 gap-4 sm:mb-0 sm:max-w-[75%] md:max-w-[70%] lg:max-w-[60%] xl:max-w-[50%] 2xl:max-w-[40%]">
         {features.map((feature) => {
           return (
             <li key={feature.label}>

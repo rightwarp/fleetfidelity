@@ -5,6 +5,7 @@ import { CallToAction } from "./CallToAction"
 import { CostSavings } from "./CostSavings"
 import { HomeHero } from "./HomeHero"
 import { IconGrid } from "./IconGrid"
+import { Testimonials } from "./Testimonials"
 
 export const Blocks = (props: Page) => {
   return (
@@ -32,6 +33,8 @@ const Block = (block: PageBlocks) => {
       return <CallToAction {...block} />
     case "PageBlocksCostSavings":
       return <CostSavings {...block} />
+    case "PageBlocksTestimonials":
+      return <Testimonials {...block} />
     default:
       return block?.__typename
   }
