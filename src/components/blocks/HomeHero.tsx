@@ -124,38 +124,38 @@ export const HomeHero = ({
           })}
         </div>
       </div>
-      <ul className="mx-auto mb-4 grid grid-cols-2 gap-4 sm:max-w-[75%] md:max-w-[70%] lg:max-w-[60%] xl:max-w-[50%] 2xl:max-w-[40%]">
+      <ul className="mx-auto grid gap-4 sm:mb-4 sm:max-w-[75%] sm:grid-cols-2 md:max-w-[70%] lg:max-w-[60%] xl:max-w-[50%] 2xl:max-w-[40%]">
         {features.map((feature) => {
           return (
-            <li key={feature.label}>
+            <li key={feature.label} className="flex justify-center sm:block">
               <FeatureChip {...feature} />
             </li>
           )
         })}
       </ul>
-      <div className="relative">
+      <div className="relative hidden sm:block">
         <div
-          className="absolute -right-48 -top-4 -z-10 opacity-75 sm:-top-8 sm:left-0 sm:right-[unset]"
+          className="absolute -right-48 -top-80 -z-10 hidden opacity-75 sm:-top-8 sm:left-0 sm:right-[unset] sm:block"
           aria-hidden="true"
         >
           <HeroIconsLeft />
         </div>
         <div
-          className="absolute -left-48 -top-4 -z-10 opacity-75 sm:-top-8 sm:left-[unset] sm:right-0"
+          className="absolute -left-48 -top-80 -z-10 opacity-75 sm:-top-8 sm:left-[unset] sm:right-0 sm:block"
           aria-hidden="true"
         >
           <HeroIconsRight />
         </div>
         <div className="relative pt-12 sm:h-72 sm:px-12 md:h-80 md:px-12 lg:h-96 lg:px-28 xl:h-[38rem]">
           <div
-            className="hidden justify-end gap-2 rounded-t-md border-2 border-base-300 bg-base-200 p-2 sm:flex"
+            className="justify-end gap-2 rounded-t-md border-2 border-base-300 bg-base-200 p-2 sm:flex"
             aria-hidden="true"
           >
             <div className="size-3 rounded-full bg-gray-400"></div>
             <div className="size-3 rounded-full bg-gray-400"></div>
             <div className="size-3 rounded-full bg-gray-400"></div>
           </div>
-          <div className="relative hidden border-b-2 border-l-2 border-r-2 border-base-300 bg-base-200 p-0 sm:block">
+          <div className="relative border-b-2 border-l-2 border-r-2 border-base-300 bg-base-200 p-0 sm:block">
             <AnimatePresence>
               {images[productImage] && (
                 <AnimatedProductImage
