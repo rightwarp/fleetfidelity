@@ -1,3 +1,4 @@
+import { HasDividerField } from "@tina/fields/hasDivider"
 import { createImageField } from "@tina/fields/image"
 import { Template } from "tinacms"
 
@@ -5,6 +6,7 @@ export const KeyBenefits: Template = {
   name: "keyBenefits",
   label: "Key Benefits",
   fields: [
+    HasDividerField,
     {
       name: "heading",
       label: "Heading",

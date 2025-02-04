@@ -150,7 +150,7 @@ export const HomeHero = ({
         >
           <HeroIconsRight />
         </div>
-        <div className="relative h-44 sm:h-72 sm:px-12 sm:pt-8 md:h-80 md:px-12 lg:h-96 lg:px-28 xl:h-[38rem]">
+        <div className="relative h-44 sm:h-72 sm:px-12 sm:pt-8 md:h-80 md:px-12 lg:h-96 lg:px-28 xl:h-[36rem]">
           <div
             className="flex justify-end gap-2 rounded-t-md border-2 border-base-300 bg-base-200 p-2"
             aria-hidden="true"

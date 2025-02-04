@@ -5,6 +5,7 @@ import { CallToAction } from "./CallToAction"
 import { CostSavings } from "./CostSavings"
 import { HomeHero } from "./HomeHero"
 import { IconGrid } from "./IconGrid"
+import { KeyBenefits } from "./KeyBenefits"
 import { Testimonials } from "./Testimonials"
 
 export const Blocks = (props: Page) => {
@@ -25,16 +26,23 @@ export const Blocks = (props: Page) => {
 
 const Block = (block: PageBlocks) => {
   switch (block?.__typename) {
-    case "PageBlocksHomeHero":
-      return <HomeHero {...block} />
+    // shared blocks
     case "PageBlocksIconGrid":
       return <IconGrid {...block} />
     case "PageBlocksCallToAction":
       return <CallToAction {...block} />
+
+    // home page blocks
+    case "PageBlocksHomeHero":
+      return <HomeHero {...block} />
     case "PageBlocksCostSavings":
       return <CostSavings {...block} />
     case "PageBlocksTestimonials":
       return <Testimonials {...block} />
+    case "PageBlocksKeyBenefits":
+      return <KeyBenefits {...block} />
+
+    // about page blocks
     default:
       return block?.__typename
   }

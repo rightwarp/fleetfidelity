@@ -1,9 +1,11 @@
+import { HasDividerField } from "@tina/fields/hasDivider"
 import { Template } from "tinacms"
 
 export const Beliefs: Template = {
   name: "beliefs",
   label: "Beliefs",
   fields: [
+    HasDividerField,
     {
       name: "heading",
       label: "Heading",

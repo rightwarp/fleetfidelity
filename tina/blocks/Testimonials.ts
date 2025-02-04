@@ -1,3 +1,4 @@
+import { HasDividerField } from "@tina/fields/hasDivider"
 import { toReferenceLabel } from "@tina/plugins/referenceLabel"
 import { Template } from "tinacms"
 
@@ -5,6 +6,7 @@ export const Testimonials: Template = {
   name: "testimonials",
   label: "Testimonials",
   fields: [
+    HasDividerField,
     {
       name: "isHidden",
       label: "Is Hidden",

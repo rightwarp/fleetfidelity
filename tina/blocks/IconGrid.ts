@@ -1,3 +1,4 @@
+import { HasDividerField } from "@tina/fields/hasDivider"
 import { createImageField } from "@tina/fields/image"
 import { Template } from "tinacms"
 
@@ -5,6 +6,7 @@ export const IconGrid: Template = {
   name: "iconGrid",
   label: "Icon Grid",
   fields: [
+    HasDividerField,
     {
       name: "theme",
       label: "Theme",

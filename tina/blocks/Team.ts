@@ -1,3 +1,4 @@
+import { HasDividerField } from "@tina/fields/hasDivider"
 import { toReferenceLabel } from "@tina/plugins/referenceLabel"
 import { toUiLabel } from "@tina/plugins/uiLabel"
 import { Template } from "tinacms"
@@ -6,6 +7,7 @@ export const Team: Template = {
   name: "team",
   label: "Team",
   fields: [
+    HasDividerField,
     {
       name: "heading",
       label: "Heading",

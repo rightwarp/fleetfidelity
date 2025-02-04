@@ -23,7 +23,7 @@ export const Footer = ({ query }: FooterProps) => {
   const year = new Date().getFullYear()
 
   return (
-    <footer className="flex justify-center border-t border-base-300 bg-base-100 py-12">
+    <footer className="flex justify-center bg-base-100 py-12">
       <div className="md:max-w-800 grid w-full grid-cols-1 gap-8 px-6 sm:grid-cols-2 md:w-auto md:px-8">
         <div>
           <Image
