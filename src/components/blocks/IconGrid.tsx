@@ -28,21 +28,39 @@ const IconLayouts = {
   HORIZONTAL: "Horizontal",
 }
 
-const Displayicon = ({
+const DisplayIcon = ({
+  theme,
   icon,
   iconSize,
+  badge,
+  hasIconBadge,
 }: {
   icon: PageBlocksIconGridIconsIcon
+  theme: PageBlocksIconGrid["theme"]
   iconSize: PageBlocksIconGrid["iconSize"]
+  badge?: number
+  hasIconBadge: PageBlocksIconGrid["hasIconBadge"]
 }) => {
   return (
     <div
-      className={cn("relative flex flex-shrink-0", {
-        "size-16 sm:size-28": iconSize === IconSizes.LARGE,
-        "size-12": iconSize === IconSizes.NORMAL,
+      className={cn({
+        "relative rounded-full bg-base-200 p-8":
+          iconSize === IconSizes.NORMAL && theme === Themes.DEFAULT,
       })}
     >
-      <Image src={icon.src} alt={icon.alt || ""} fill />
+      {hasIconBadge && (
+        <div className="absolute left-0 top-0 flex size-8 items-center justify-center rounded-full border-2 border-navy-950 bg-base-100">
+          <span className="text-lg font-semibold">{badge}</span>
+        </div>
+      )}
+      <div
+        className={cn("relative flex flex-shrink-0", {
+          "size-16 md:size-28": iconSize === IconSizes.LARGE,
+          "size-8": iconSize === IconSizes.NORMAL,
+        })}
+      >
+        <Image src={icon.src} alt={icon.alt || ""} fill />
+      </div>
     </div>
   )
 }
@@ -52,7 +70,7 @@ export const IconGrid = ({
   iconLayout,
   heading,
   iconSize,
-  // hasIconBadge,
+  hasIconBadge,
   icons,
   // bottomText,
 }: PageBlocksIconGrid) => {
@@ -83,16 +101,16 @@ export const IconGrid = ({
           "grid gap-16 md:grid-cols-2": iconSize === IconSizes.NORMAL,
         })}
       >
-        {icons.map((icon) => {
+        {icons.map((icon, idx) => {
           return (
             <div
               key={icon.title}
               className={cn(
                 "relative flex max-w-64 flex-col gap-4 text-center md:gap-8",
                 {
-                  "pt-10 sm:pt-[3.5rem]": iconSize === IconSizes.LARGE,
+                  "pt-10 md:pt-[3.5rem]": iconSize === IconSizes.LARGE,
                   "flex-col items-center": iconLayout === IconLayouts.VERTICAL,
-                  "mx-auto flex-col items-center md:mx-[unset] md:flex-row md:items-start":
+                  "mx-auto flex-col items-center sm:max-w-[unset] md:mx-[unset] md:flex-row md:items-start":
                     iconLayout === IconLayouts.HORIZONTAL,
                 },
               )}
@@ -100,15 +118,21 @@ export const IconGrid = ({
               {iconSize === IconSizes.LARGE && (
                 <div
                   aria-hidden="true"
-                  className="absolute top-0 z-0 size-36 rounded-full bg-navy-700 opacity-20 sm:size-56"
+                  className="absolute top-0 z-0 size-36 rounded-full bg-navy-700 opacity-20 md:size-56"
                 />
               )}
-              <Displayicon icon={icon.icon} iconSize={iconSize} />
+              <DisplayIcon
+                badge={idx + 1}
+                theme={theme}
+                hasIconBadge={hasIconBadge}
+                icon={icon.icon}
+                iconSize={iconSize}
+              />
               <div
                 className={cn("flex flex-col gap-3", {
                   "items-center text-center":
                     iconLayout === IconLayouts.VERTICAL,
-                  "items-center text-center md:items-start md:text-start":
+                  "items-center text-center md:items-start md:pt-4 md:text-start":
                     iconLayout === IconLayouts.HORIZONTAL,
                 })}
               >
