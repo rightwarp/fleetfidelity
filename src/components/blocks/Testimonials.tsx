@@ -168,14 +168,14 @@ export const Testimonials = ({
       <div className="flex justify-center gap-4">
         <button
           onClick={handlePrevClick}
-          className="btn btn-ghost"
+          className="btn btn-circle btn-ghost"
           aria-label="Previous testimonial"
         >
           <ChevronLeft size={24} />
         </button>
         <button
           onClick={handleNextClick}
-          className="btn btn-ghost"
+          className="btn btn-circle btn-ghost"
           aria-label="Next testimonial"
         >
           <ChevronRight size={24} />
