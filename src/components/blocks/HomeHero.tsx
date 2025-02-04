@@ -106,7 +106,7 @@ export const HomeHero = ({
       }}
       isCollapsed
     >
-      <div className="mb-8 flex flex-col text-center">
+      <div className="mb-8 flex flex-col text-center md:mb-12">
         <TinaMarkdown
           content={heading}
           components={HomeHeroHeadingMarkdownComponents}
@@ -128,10 +128,10 @@ export const HomeHero = ({
           })}
         </div>
       </div>
-      <ul className="mx-auto mb-8 grid gap-4 sm:mb-12 sm:max-w-[75%] sm:grid-cols-2 md:max-w-[70%] lg:max-w-[60%] xl:max-w-[50%] 2xl:max-w-[40%]">
+      <ul className="mx-auto mb-6 grid grid-cols-2 gap-4 sm:max-w-[75%] md:max-w-[70%] lg:max-w-[60%] xl:max-w-[50%] 2xl:max-w-[40%]">
         {features.map((feature) => {
           return (
-            <li key={feature.label} className="flex justify-center sm:block">
+            <li key={feature.label}>
               <FeatureChip {...feature} />
             </li>
           )
@@ -139,18 +139,18 @@ export const HomeHero = ({
       </ul>
       <div className="relative">
         <div
-          className="absolute -right-48 -top-80 -z-10 hidden opacity-75 sm:-top-8 sm:left-0 sm:right-[unset] sm:block"
+          className="absolute -top-96 -z-10 hidden opacity-75 sm:-top-16 sm:left-0 sm:block"
           aria-hidden="true"
         >
           <HeroIconsLeft />
         </div>
         <div
-          className="absolute -left-48 -top-80 -z-10 hidden opacity-75 sm:-top-8 sm:left-[unset] sm:right-0 sm:block"
+          className="absolute -top-96 -z-10 hidden opacity-75 sm:-top-16 sm:right-0 sm:block"
           aria-hidden="true"
         >
           <HeroIconsRight />
         </div>
-        <div className="relative h-44 sm:h-72 sm:px-12 sm:pt-12 md:h-80 md:px-12 lg:h-96 lg:px-28 xl:h-[38rem]">
+        <div className="relative h-44 sm:h-72 sm:px-12 sm:pt-8 md:h-80 md:px-12 lg:h-96 lg:px-28 xl:h-[38rem]">
           <div
             className="flex justify-end gap-2 rounded-t-md border-2 border-base-300 bg-base-200 p-2"
             aria-hidden="true"
