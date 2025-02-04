@@ -100,7 +100,9 @@ export const HomeHero = ({
   return (
     <Container
       tag="section"
-      className="pb-12 pt-12 sm:overflow-hidden sm:pb-0 lg:pt-24"
+      outerProps={{
+        className: "overflow-hidden pb-0 pt-12 sm:pb-0 lg:pt-24",
+      }}
       isCollapsed
     >
       <div className="mb-12 flex flex-col gap-5 text-center md:gap-8">
@@ -124,7 +126,7 @@ export const HomeHero = ({
           })}
         </div>
       </div>
-      <ul className="mx-auto grid gap-4 sm:mb-4 sm:max-w-[75%] sm:grid-cols-2 md:max-w-[70%] lg:max-w-[60%] xl:max-w-[50%] 2xl:max-w-[40%]">
+      <ul className="mx-auto mb-8 grid gap-4 sm:mb-12 sm:max-w-[75%] sm:grid-cols-2 md:max-w-[70%] lg:max-w-[60%] xl:max-w-[50%] 2xl:max-w-[40%]">
         {features.map((feature) => {
           return (
             <li key={feature.label} className="flex justify-center sm:block">
@@ -133,7 +135,7 @@ export const HomeHero = ({
           )
         })}
       </ul>
-      <div className="relative hidden sm:block">
+      <div className="relative">
         <div
           className="absolute -right-48 -top-80 -z-10 hidden opacity-75 sm:-top-8 sm:left-0 sm:right-[unset] sm:block"
           aria-hidden="true"
@@ -141,14 +143,14 @@ export const HomeHero = ({
           <HeroIconsLeft />
         </div>
         <div
-          className="absolute -left-48 -top-80 -z-10 opacity-75 sm:-top-8 sm:left-[unset] sm:right-0 sm:block"
+          className="absolute -left-48 -top-80 -z-10 hidden opacity-75 sm:-top-8 sm:left-[unset] sm:right-0 sm:block"
           aria-hidden="true"
         >
           <HeroIconsRight />
         </div>
-        <div className="relative pt-12 sm:h-72 sm:px-12 md:h-80 md:px-12 lg:h-96 lg:px-28 xl:h-[38rem]">
+        <div className="relative h-36 sm:h-72 sm:px-12 sm:pt-12 md:h-80 md:px-12 lg:h-96 lg:px-28 xl:h-[38rem]">
           <div
-            className="justify-end gap-2 rounded-t-md border-2 border-base-300 bg-base-200 p-2 sm:flex"
+            className="flex justify-end gap-2 rounded-t-md border-2 border-base-300 bg-base-200 p-2"
             aria-hidden="true"
           >
             <div className="size-3 rounded-full bg-gray-400"></div>
