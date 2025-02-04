@@ -174,7 +174,7 @@ export const Header = ({ query }: Headerprops) => {
   const contactHref = getRoute(contactItem?.pageRef?._sys.filename)
 
   return (
-    <header className="sticky top-0">
+    <header className="sticky top-0 z-20">
       <div className="flex items-center justify-between bg-base-200 px-3 py-2 md:px-16">
         <Link href="/" onClick={closeMenu}>
           <Image

@@ -22,7 +22,7 @@ export const Container = ({
       {...outerProps}
       className={cn(
         {
-          "py-12 lg:py-24": !isCollapsed,
+          "py-16 lg:py-24": !isCollapsed,
         },
         outerProps.className,
       )}
