@@ -41,7 +41,7 @@ const DisplayIcon = ({
   return (
     <div
       className={cn({
-        "relative rounded-full bg-base-200 p-8":
+        "relative rounded-full bg-base-200 p-7":
           iconSize === IconSizes.NORMAL && theme === Themes.DEFAULT,
       })}
     >
@@ -53,7 +53,7 @@ const DisplayIcon = ({
       <div
         className={cn("relative flex flex-shrink-0", {
           "size-16 md:size-28": iconSize === IconSizes.LARGE,
-          "size-8": iconSize === IconSizes.NORMAL,
+          "size-12": iconSize === IconSizes.NORMAL,
         })}
       >
         <Image src={icon.src} alt={icon.alt || ""} fill />
