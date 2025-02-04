@@ -7,7 +7,7 @@ import { cn, getRoute } from "@/utils/helpers"
 
 import { Container } from "../app/Container"
 import {
-  DefaultSectionHeadingMarkdownComponents,
+  HeadingMarkdownComponents,
   PrimarySectionHeadingMarkdownComponents,
 } from "../app/MarkdownComponents"
 
@@ -39,7 +39,7 @@ export const CallToAction = ({
           components={
             theme === Themes.PRIMARY
               ? PrimarySectionHeadingMarkdownComponents
-              : DefaultSectionHeadingMarkdownComponents
+              : HeadingMarkdownComponents
           }
         />
       </div>

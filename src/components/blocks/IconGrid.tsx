@@ -10,7 +10,7 @@ import { cn } from "@/utils/helpers"
 import { Container } from "../app/Container"
 import {
   PrimarySectionHeadingMarkdownComponents,
-  DefaultSectionHeadingMarkdownComponents,
+  HeadingMarkdownComponents,
 } from "../app/MarkdownComponents"
 
 import { Themes } from "./utils"
@@ -87,7 +87,7 @@ export const IconGrid = ({
           components={
             theme === Themes.PRIMARY
               ? PrimarySectionHeadingMarkdownComponents
-              : DefaultSectionHeadingMarkdownComponents
+              : HeadingMarkdownComponents
           }
         />
       </div>

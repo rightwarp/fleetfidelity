@@ -2,6 +2,7 @@ import { Page, PageBlocks } from "@tina/__generated__/types"
 import { tinaField } from "tinacms/dist/react"
 
 import { CallToAction } from "./CallToAction"
+import { CostSavings } from "./CostSavings"
 import { HomeHero } from "./HomeHero"
 import { IconGrid } from "./IconGrid"
 
@@ -29,6 +30,8 @@ const Block = (block: PageBlocks) => {
       return <IconGrid {...block} />
     case "PageBlocksCallToAction":
       return <CallToAction {...block} />
+    case "PageBlocksCostSavings":
+      return <CostSavings {...block} />
     default:
       return block?.__typename
   }
