@@ -13,10 +13,7 @@ import {
   DefaultSectionHeadingMarkdownComponents,
 } from "../app/MarkdownComponents"
 
-const Themes = {
-  PRIMARY: "Primary",
-  DEFAULT: "Default",
-}
+import { Themes } from "./utils"
 
 const IconSizes = {
   NORMAL: "Normal",
@@ -84,7 +81,7 @@ export const IconGrid = ({
         }),
       }}
     >
-      <div className="mb-12 flex flex-col gap-5 text-center md:gap-8">
+      <div className="flex flex-col text-center">
         <TinaMarkdown
           content={heading}
           components={

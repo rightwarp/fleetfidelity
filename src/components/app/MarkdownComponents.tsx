@@ -35,10 +35,13 @@ export const HomeHeroHeadingMarkdownComponents: MarkdownComponentsType = {
   h1: (props) =>
     MarkdownComponents.h1({
       ...props,
-      className: cn("mx-auto max-w-[60rem]"),
+      className: cn("mx-auto mb-8 max-w-[60rem] lg:mb-12"),
     }),
   p: (props) => (
-    <p {...props} className="mx-auto max-w-[50rem] text-base md:text-xl" />
+    <p
+      {...props}
+      className="mx-auto mb-8 max-w-[50rem] text-base md:text-xl lg:mb-12"
+    />
   ),
 }
 
@@ -47,12 +50,12 @@ export const PrimarySectionHeadingMarkdownComponents: MarkdownComponentsType = {
   h2: (props) =>
     MarkdownComponents.h2({
       ...props,
-      className: cn("mx-auto max-w-[60rem] text-white"),
+      className: cn("mx-auto mb-8 max-w-[60rem] text-white lg:mb-12"),
     }),
   p: (props) => (
     <p
       {...props}
-      className="mx-auto max-w-[50rem] text-base text-primary-content md:text-xl"
+      className="mx-auto mb-8 max-w-[50rem] text-base text-primary-content md:text-xl lg:mb-12"
     />
   ),
 }
@@ -62,9 +65,12 @@ export const DefaultSectionHeadingMarkdownComponents: MarkdownComponentsType = {
   h2: (props) =>
     MarkdownComponents.h2({
       ...props,
-      className: cn("mx-auto max-w-[60rem] text-black"),
+      className: cn("mx-auto mb-8 max-w-[60rem] text-black lg:mb-12"),
     }),
   p: (props) => (
-    <p {...props} className="mx-auto max-w-[50rem] text-base md:text-xl" />
+    <p
+      {...props}
+      className="mx-auto mb-8 max-w-[50rem] text-base md:text-xl lg:mb-12"
+    />
   ),
 }

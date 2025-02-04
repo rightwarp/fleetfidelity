@@ -16,6 +16,7 @@ import {
 import { AnimatePresence } from "motion/react"
 import * as motion from "motion/react-client"
 import Image from "next/image"
+import Link from "next/link"
 import { useEffect, useState } from "react"
 import { TinaMarkdown } from "tinacms/dist/rich-text"
 
@@ -105,23 +106,24 @@ export const HomeHero = ({
       }}
       isCollapsed
     >
-      <div className="mb-12 flex flex-col gap-5 text-center md:gap-8">
+      <div className="mb-8 flex flex-col text-center">
         <TinaMarkdown
           content={heading}
           components={HomeHeroHeadingMarkdownComponents}
         />
-        <div className="flex justify-center gap-4 lg:gap-6">
+        <div className="flex flex-col flex-wrap items-center gap-4 md:flex-row md:justify-center md:gap-8">
           {actions.map((action) => {
             const href = action.href || getRoute(action.pageRef?._sys.filename)
+            const Tag = action.href ? "a" : Link
 
             return (
-              <a
+              <Tag
                 key={action.label}
                 href={href}
-                className="btn btn-primary flex-shrink lg:btn-lg"
+                className="btn btn-primary flex-shrink md:btn-lg"
               >
                 {action.label}
-              </a>
+              </Tag>
             )
           })}
         </div>
