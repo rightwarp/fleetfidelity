@@ -1,6 +1,7 @@
 import { Page, PageBlocks } from "@tina/__generated__/types"
 import { tinaField } from "tinacms/dist/react"
 
+import { Beliefs } from "./Beliefs"
 import { CallToAction } from "./CallToAction"
 import { CompanyStory } from "./CompanyStory"
 import { CostSavings } from "./CostSavings"
@@ -49,6 +50,8 @@ const Block = (block: PageBlocks) => {
     // about page blocks
     case "PageBlocksCompanyStory":
       return <CompanyStory {...block} />
+    case "PageBlocksBeliefs":
+      return <Beliefs {...block} />
 
     // default
     default:

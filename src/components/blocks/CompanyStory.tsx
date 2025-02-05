@@ -5,9 +5,14 @@ import { TinaMarkdown } from "tinacms/dist/rich-text"
 import { Container } from "../app/Container"
 import { PrimarySectionHeadingMarkdownComponents } from "../app/MarkdownComponents"
 
-export const CompanyStory = ({ content, bgImage }: PageBlocksCompanyStory) => {
+export const CompanyStory = ({
+  content,
+  bgImage,
+  hasDivider,
+}: PageBlocksCompanyStory) => {
   return (
     <Container
+      hasDivider={hasDivider}
       tag="section"
       outerProps={{ className: "bg-primary relative overflow-hidden" }}
     >
