@@ -14,7 +14,8 @@ blocks:
       Left Hand Milk Stout about an Ellis Island IPA. When a smashed King Henry
       hesitates, the milwakees best for the line dancer rejoices.
     _template: hero
-  - resources:
+  - isCollapsed: true
+    resources:
       - resourceRef: src/content/resources/a-tattered-broken-bottle-1.json
       - resourceRef: src/content/resources/a-tattered-broken-bottle-2.json
       - resourceRef: src/content/resources/a-tattered-broken-bottle-3.json
@@ -22,9 +23,11 @@ blocks:
       - resourceRef: src/content/resources/a-tattered-broken-bottle-5.json
       - resourceRef: src/content/resources/a-tattered-broken-bottle-6.json
     _template: resources
+  - color: Transparent
+    _template: spacer
   - theme: Primary
     heading: |
-      ## Elevate Your Fleet Operations
+      ## **Elevate Your Fleet Operations**
     actions:
       - label: Schedule A Demo
         pageRef: src/content/pages/contact.mdx

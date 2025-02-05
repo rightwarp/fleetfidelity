@@ -37,10 +37,10 @@ const TeamGroup = ({ title, members }: PageBlocksTeamGroups) => {
   )
 }
 
-export const Team = ({ heading, groups, hasDivider }: PageBlocksTeam) => {
+export const Team = ({ heading, groups, isCollapsed }: PageBlocksTeam) => {
   return (
     <Container
-      hasDivider={hasDivider}
+      isCollapsed={isCollapsed}
       outerProps={{ className: "bg-base-200" }}
     >
       <div className="mx-auto mb-8 max-w-[50rem] text-center">

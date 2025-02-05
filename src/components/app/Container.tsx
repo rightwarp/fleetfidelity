@@ -6,9 +6,7 @@ import { cn } from "@/utils/helpers"
 interface ContainerProps extends HTMLAttributes<HTMLElement> {
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   tag?: any
-  isCollapsed?: boolean
-  // Maybe required because this is provided directly from Tina CMS
-  hasDivider?: Maybe<boolean> | boolean
+  isCollapsed?: Maybe<boolean> | boolean
   outerProps?: HTMLAttributes<HTMLElement>
 }
 
@@ -18,7 +16,6 @@ export const Container = ({
   className,
   outerProps = {},
   isCollapsed = false,
-  hasDivider = false,
   ...props
 }: ContainerProps) => {
   return (
@@ -27,7 +24,6 @@ export const Container = ({
       className={cn(
         {
           "py-16 lg:py-24": !isCollapsed,
-          "border-b border-base-300": hasDivider,
         },
         outerProps.className,
       )}

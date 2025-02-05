@@ -7,9 +7,9 @@ import {
   MarkdownComponentsType,
 } from "../app/MarkdownComponents"
 
-export const Hero = ({ heading, hasDivider }: PageBlocksHero) => {
+export const Hero = ({ heading, isCollapsed }: PageBlocksHero) => {
   return (
-    <Container tag="section" hasDivider={hasDivider}>
+    <Container tag="section" isCollapsed={isCollapsed}>
       <div className="mx-auto max-w-[70rem]">
         <TinaMarkdown
           content={heading}

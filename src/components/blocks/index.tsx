@@ -5,10 +5,13 @@ import { Beliefs } from "./Beliefs"
 import { CallToAction } from "./CallToAction"
 import { CompanyStory } from "./CompanyStory"
 import { CostSavings } from "./CostSavings"
+import { Divider } from "./Divider"
 import { Hero } from "./Hero"
 import { HomeHero } from "./HomeHero"
 import { IconGrid } from "./IconGrid"
 import { KeyBenefits } from "./KeyBenefits"
+import { Resources } from "./Resources"
+import { Spacer } from "./Spacer"
 import { Team } from "./Team"
 import { Testimonials } from "./Testimonials"
 
@@ -37,6 +40,10 @@ const Block = (block: PageBlocks) => {
       return <CallToAction {...block} />
     case "PageBlocksHero":
       return <Hero {...block} />
+    case "PageBlocksSpacer":
+      return <Spacer {...block} />
+    case "PageBlocksDivider":
+      return <Divider {...block} />
 
     // home page blocks
     case "PageBlocksHomeHero":
@@ -55,6 +62,10 @@ const Block = (block: PageBlocks) => {
       return <Beliefs {...block} />
     case "PageBlocksTeam":
       return <Team {...block} />
+
+    // resources page blocks
+    case "PageBlocksResources":
+      return <Resources {...block} />
 
     // default
     default:

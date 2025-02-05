@@ -8,11 +8,11 @@ import { PrimarySectionHeadingMarkdownComponents } from "../app/MarkdownComponen
 export const CompanyStory = ({
   content,
   bgImage,
-  hasDivider,
+  isCollapsed,
 }: PageBlocksCompanyStory) => {
   return (
     <Container
-      hasDivider={hasDivider}
+      isCollapsed={isCollapsed}
       tag="section"
       outerProps={{ className: "bg-primary relative overflow-hidden" }}
     >

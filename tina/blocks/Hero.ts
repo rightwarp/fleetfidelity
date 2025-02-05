@@ -1,11 +1,11 @@
-import { HasDividerField } from "@tina/fields/hasDivider"
+import { IsCollapsedField } from "@tina/fields/isCollapsed"
 import { Template } from "tinacms"
 
 export const Hero: Template = {
   name: "hero",
   label: "Page Hero",
   fields: [
-    HasDividerField,
+    IsCollapsedField,
     {
       name: "heading",
       label: "Heading",

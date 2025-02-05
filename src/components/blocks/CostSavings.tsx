@@ -11,11 +11,11 @@ import {
 export const CostSavings = ({
   heading,
   image,
-  hasDivider,
+  isCollapsed,
 }: PageBlocksCostSavings) => {
   return (
     <Container
-      hasDivider={hasDivider}
+      isCollapsed={isCollapsed}
       tag="section"
       className="grid gap-8 lg:grid-cols-2 lg:items-center"
     >

@@ -1,12 +1,12 @@
-import { HasDividerField } from "@tina/fields/hasDivider"
 import { createImageField } from "@tina/fields/image"
+import { IsCollapsedField } from "@tina/fields/isCollapsed"
 import { Template } from "tinacms"
 
 export const IconGrid: Template = {
   name: "iconGrid",
   label: "Icon Grid",
   fields: [
-    HasDividerField,
+    IsCollapsedField,
     {
       name: "theme",
       label: "Theme",

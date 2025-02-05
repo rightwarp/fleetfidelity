@@ -93,7 +93,7 @@ export const Testimonials = ({
   heading,
   testimonials,
   transitionDelay: _transitionDelay = 5,
-  hasDivider,
+  isCollapsed,
   isHidden,
 }: PageBlocksTestimonials) => {
   const [page, setPage] = useState<number>(0)
@@ -144,7 +144,7 @@ export const Testimonials = ({
 
   return (
     <Container
-      hasDivider={hasDivider}
+      isCollapsed={isCollapsed}
       tag="section"
       outerProps={{
         className: cn("bg-base-200"),

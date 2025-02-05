@@ -2,11 +2,13 @@ import { Beliefs } from "@tina/blocks/Beliefs"
 import { CallToAction } from "@tina/blocks/CallToAction"
 import { CompanyStory } from "@tina/blocks/CompanyStory"
 import { CostSavings } from "@tina/blocks/CostSavings"
+import { Divider } from "@tina/blocks/Divider"
 import { Hero } from "@tina/blocks/Hero"
 import { HomeHero } from "@tina/blocks/HomeHero"
 import { IconGrid } from "@tina/blocks/IconGrid"
 import { KeyBenefits } from "@tina/blocks/KeyBenefits"
 import { Resources } from "@tina/blocks/Resources"
+import { Spacer } from "@tina/blocks/Spacer"
 import { Team } from "@tina/blocks/Team"
 import { Testimonials } from "@tina/blocks/Testimonials"
 import { WYSIWYG } from "@tina/blocks/WYSIWYG"
@@ -51,6 +53,8 @@ export const Page: Collection = {
         IconGrid,
         WYSIWYG,
         Hero,
+        Spacer,
+        Divider,
 
         // home
         HomeHero,

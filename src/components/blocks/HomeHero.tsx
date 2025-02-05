@@ -87,7 +87,7 @@ export const HomeHero = ({
   actions,
   images,
   features,
-  hasDivider,
+  isCollapsed,
 }: PageBlocksHomeHero) => {
   const [productImage, setProductImage] = useState<number>(0)
 
@@ -105,8 +105,7 @@ export const HomeHero = ({
       outerProps={{
         className: "overflow-hidden pb-0 pt-12 sm:pb-0 lg:pt-24",
       }}
-      hasDivider={hasDivider}
-      isCollapsed
+      isCollapsed={isCollapsed}
     >
       <div className="mx-auto mb-8 max-w-[50rem] text-center md:mb-12">
         <TinaMarkdown

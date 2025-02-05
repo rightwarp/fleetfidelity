@@ -1,4 +1,4 @@
-import { HasDividerField } from "@tina/fields/hasDivider"
+import { IsCollapsedField } from "@tina/fields/isCollapsed"
 import { toUiLabel } from "@tina/plugins/uiLabel"
 import { Template } from "tinacms"
 
@@ -6,7 +6,7 @@ export const HomeHero: Template = {
   name: "homeHero",
   label: "Home Hero",
   fields: [
-    HasDividerField,
+    IsCollapsedField,
     {
       name: "heading",
       label: "Heading",

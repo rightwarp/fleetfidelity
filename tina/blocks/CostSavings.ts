@@ -1,12 +1,12 @@
-import { HasDividerField } from "@tina/fields/hasDivider"
 import { createImageField } from "@tina/fields/image"
+import { IsCollapsedField } from "@tina/fields/isCollapsed"
 import { Template } from "tinacms"
 
 export const CostSavings: Template = {
   name: "costSavings",
   label: "Cost Savings",
   fields: [
-    HasDividerField,
+    IsCollapsedField,
     {
       name: "heading",
       label: "Heading",

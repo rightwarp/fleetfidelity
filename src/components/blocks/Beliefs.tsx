@@ -7,10 +7,10 @@ import { HeadingMarkdownComponents } from "../app/MarkdownComponents"
 export const Beliefs = ({
   heading,
   beliefs,
-  hasDivider,
+  isCollapsed,
 }: PageBlocksBeliefs) => {
   return (
-    <Container hasDivider={hasDivider}>
+    <Container isCollapsed={isCollapsed}>
       <div className="mx-auto max-w-[50rem] text-center">
         <TinaMarkdown
           content={heading}

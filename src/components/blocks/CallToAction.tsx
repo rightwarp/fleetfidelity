@@ -22,11 +22,11 @@ export const CallToAction = ({
   theme,
   heading,
   actions,
-  hasDivider,
+  isCollapsed,
 }: PageBlocksCallToAction) => {
   return (
     <Container
-      hasDivider={hasDivider}
+      isCollapsed={isCollapsed}
       tag="section"
       outerProps={{
         className: cn({

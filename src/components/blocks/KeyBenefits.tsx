@@ -10,10 +10,10 @@ import { HeadingMarkdownComponents } from "../app/MarkdownComponents"
 export const KeyBenefits = ({
   heading,
   benefits,
-  hasDivider,
+  isCollapsed,
 }: PageBlocksKeyBenefits) => {
   return (
-    <Container tag="section" hasDivider={hasDivider}>
+    <Container tag="section" isCollapsed={isCollapsed}>
       <div className="mx-auto max-w-[50rem] text-center">
         <TinaMarkdown
           content={heading}
