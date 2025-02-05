@@ -19,7 +19,7 @@ export const CostSavings = ({
       tag="section"
       className="grid gap-8 lg:grid-cols-2 lg:items-center"
     >
-      <div className="text-center lg:text-start">
+      <div className="mx-auto max-w-[50rem] text-center lg:mx-[unset] lg:max-w-[unset] lg:text-start">
         <TinaMarkdown
           content={heading}
           components={

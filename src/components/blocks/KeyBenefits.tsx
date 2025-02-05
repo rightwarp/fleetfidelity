@@ -14,7 +14,7 @@ export const KeyBenefits = ({
 }: PageBlocksKeyBenefits) => {
   return (
     <Container tag="section" hasDivider={hasDivider}>
-      <div className="text-center">
+      <div className="mx-auto max-w-[50rem] text-center">
         <TinaMarkdown
           content={heading}
           components={HeadingMarkdownComponents}

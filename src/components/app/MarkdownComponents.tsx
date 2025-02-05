@@ -19,7 +19,7 @@ export const HeadingMarkdownComponents: MarkdownComponentsType = {
     <h2
       {...props}
       className={cn(
-        "mx-auto mb-4 max-w-[60rem] font-heading text-[1.75rem] !leading-[100%] tracking-tight text-black md:text-4xl lg:mb-6 lg:text-[3rem]",
+        "mb-4 font-heading text-[1.75rem] !leading-[100%] tracking-tight text-black md:text-4xl lg:mb-6 lg:text-[3rem]",
         className,
       )}
     />
@@ -27,10 +27,7 @@ export const HeadingMarkdownComponents: MarkdownComponentsType = {
   p: ({ className, ...props }) => (
     <p
       {...props}
-      className={cn(
-        "mx-auto mb-8 max-w-[50rem] text-base md:text-xl lg:mb-12",
-        className,
-      )}
+      className={cn("mb-4 text-base md:text-xl lg:mb-8", className)}
     />
   ),
   a: (props) => <a {...props} className="link" />,
@@ -41,10 +38,10 @@ export const HomeHeroHeadingMarkdownComponents: MarkdownComponentsType = {
   h1: (props) =>
     HeadingMarkdownComponents.h1({
       ...props,
-      className: cn("mx-auto mb-6 max-w-[60rem] md:mb-8"),
+      className: cn("mb-6 md:mb-8"),
     }),
   p: (props) =>
-    HeadingMarkdownComponents.p({ ...props, className: cn("mb-6 md:mb-8") }),
+    HeadingMarkdownComponents.p({ ...props, className: cn("mb-6") }),
 }
 
 // Used when a page block is themed with a primary background

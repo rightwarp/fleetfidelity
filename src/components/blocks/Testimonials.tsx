@@ -150,7 +150,7 @@ export const Testimonials = ({
         className: cn("bg-base-200"),
       }}
     >
-      <div className="text-center">
+      <div className="mx-auto max-w-[50rem] text-center">
         <TinaMarkdown
           content={heading}
           components={HeadingMarkdownComponents}

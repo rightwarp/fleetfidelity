@@ -10,7 +10,7 @@ import {
 export const Hero = ({ heading, hasDivider }: PageBlocksHero) => {
   return (
     <Container tag="section" hasDivider={hasDivider}>
-      <div className="text-start">
+      <div className="mx-auto max-w-[70rem] text-start">
         <TinaMarkdown
           content={heading}
           components={

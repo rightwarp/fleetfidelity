@@ -87,7 +87,7 @@ export const IconGrid = ({
         }),
       }}
     >
-      <div className="text-center">
+      <div className="mx-auto max-w-[50rem] text-center">
         <TinaMarkdown
           content={heading}
           components={
@@ -169,7 +169,7 @@ export const IconGrid = ({
           )
         })}
       </div>
-      {bottomText && (
+      {!!bottomText?.children?.length && (
         <div
           className={cn(
             "mx-auto max-w-[55rem] rounded-xl p-[2.5rem] text-center",

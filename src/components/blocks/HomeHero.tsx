@@ -108,7 +108,7 @@ export const HomeHero = ({
       hasDivider={hasDivider}
       isCollapsed
     >
-      <div className="mb-8 text-center md:mb-12">
+      <div className="mx-auto mb-8 max-w-[50rem] text-center md:mb-12">
         <TinaMarkdown
           content={heading}
           components={HomeHeroHeadingMarkdownComponents}
