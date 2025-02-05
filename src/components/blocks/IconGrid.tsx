@@ -69,10 +69,12 @@ export const IconGrid = ({
   iconSize,
   hasIconBadge,
   icons,
+  hasDivider,
   // bottomText,
 }: PageBlocksIconGrid) => {
   return (
     <Container
+      hasDivider={hasDivider}
       tag="section"
       outerProps={{
         className: cn({

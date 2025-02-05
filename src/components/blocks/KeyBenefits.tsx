@@ -9,7 +9,6 @@ import { HeadingMarkdownComponents } from "../app/MarkdownComponents"
 
 export const KeyBenefits = ({
   heading,
-   
   benefits,
   hasDivider,
 }: PageBlocksKeyBenefits) => {

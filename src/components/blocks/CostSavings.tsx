@@ -8,9 +8,14 @@ import {
   MarkdownComponentsType,
 } from "../app/MarkdownComponents"
 
-export const CostSavings = ({ heading, image }: PageBlocksCostSavings) => {
+export const CostSavings = ({
+  heading,
+  image,
+  hasDivider,
+}: PageBlocksCostSavings) => {
   return (
     <Container
+      hasDivider={hasDivider}
       tag="section"
       className="grid gap-8 lg:grid-cols-2 lg:items-center"
     >

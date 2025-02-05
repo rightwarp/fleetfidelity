@@ -7,8 +7,9 @@ interface ContainerProps extends HTMLAttributes<HTMLElement> {
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   tag?: any
   isCollapsed?: boolean
+  // Maybe required because this is provided directly from Tina CMS
+  hasDivider?: Maybe<boolean> | boolean
   outerProps?: HTMLAttributes<HTMLElement>
-  hasDivider?: Maybe<boolean>
 }
 
 export const Container = ({
