@@ -11,6 +11,7 @@ import { Container } from "../app/Container"
 import {
   PrimarySectionHeadingMarkdownComponents,
   HeadingMarkdownComponents,
+  MarkdownComponentsType,
 } from "../app/MarkdownComponents"
 
 import { Themes } from "./utils"
@@ -41,8 +42,11 @@ const DisplayIcon = ({
   return (
     <div
       className={cn({
-        "relative rounded-full bg-base-200 p-7":
+        "relative rounded-full p-7": iconSize === IconSizes.NORMAL,
+        "bg-base-200":
           iconSize === IconSizes.NORMAL && theme === Themes.DEFAULT,
+        "bg-navy-700/20":
+          iconSize === IconSizes.NORMAL && theme === Themes.PRIMARY,
       })}
     >
       {hasIconBadge && (
@@ -70,7 +74,7 @@ export const IconGrid = ({
   hasIconBadge,
   icons,
   hasDivider,
-  // bottomText,
+  bottomText,
 }: PageBlocksIconGrid) => {
   return (
     <Container
@@ -94,10 +98,14 @@ export const IconGrid = ({
         />
       </div>
       <div
-        className={cn("mx-auto max-w-[56rem]", {
-          "flex flex-wrap justify-center gap-12 md:gap-16":
+        className={cn("mx-auto max-w-[56rem] gap-12", {
+          "flex flex-wrap justify-center md:gap-16":
             iconSize === IconSizes.LARGE,
-          "grid gap-16 md:grid-cols-2": iconSize === IconSizes.NORMAL,
+          "grid md:grid-cols-2": iconSize === IconSizes.NORMAL,
+          "max-w-[35rem]":
+            iconSize === IconSizes.NORMAL &&
+            iconLayout === IconLayouts.VERTICAL,
+          "mb-16": !!bottomText,
         })}
       >
         {icons.map((icon, idx) => {
@@ -109,6 +117,9 @@ export const IconGrid = ({
                 {
                   "pt-10 md:pt-[3.5rem]": iconSize === IconSizes.LARGE,
                   "flex-col items-center": iconLayout === IconLayouts.VERTICAL,
+                  "mx-auto":
+                    iconLayout === IconLayouts.VERTICAL &&
+                    iconSize === IconSizes.NORMAL,
                   "mx-auto flex-col items-center sm:max-w-[unset] md:mx-[unset] md:flex-row md:items-start":
                     iconLayout === IconLayouts.HORIZONTAL,
                 },
@@ -158,6 +169,33 @@ export const IconGrid = ({
           )
         })}
       </div>
+      {bottomText && (
+        <div
+          className={cn(
+            "mx-auto max-w-[55rem] rounded-xl p-[2.5rem] text-center",
+            {
+              "bg-navy-700/20": theme === Themes.PRIMARY,
+              "bg-base-200": theme === Themes.DEFAULT,
+            },
+          )}
+        >
+          <TinaMarkdown
+            content={bottomText}
+            components={
+              {
+                p: (props) => (
+                  <p
+                    {...props}
+                    className={cn("text-base md:text-xl", {
+                      "text-primary-content": theme === Themes.PRIMARY,
+                    })}
+                  />
+                ),
+              } as MarkdownComponentsType
+            }
+          />
+        </div>
+      )}
     </Container>
   )
 }

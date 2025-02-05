@@ -24,14 +24,13 @@ export const HeadingMarkdownComponents: MarkdownComponentsType = {
       )}
     />
   ),
-  h3: (props) => <h3 {...props} className="font-heading" />,
-  h4: (props) => <h4 {...props} className="font-heading" />,
-  h5: (props) => <h5 {...props} className="font-heading" />,
-  h6: (props) => <h6 {...props} className="font-heading" />,
-  p: (props) => (
+  p: ({ className, ...props }) => (
     <p
       {...props}
-      className="mx-auto mb-8 max-w-[50rem] text-base md:text-xl lg:mb-12"
+      className={cn(
+        "mx-auto mb-8 max-w-[50rem] text-base md:text-xl lg:mb-12",
+        className,
+      )}
     />
   ),
   a: (props) => <a {...props} className="link" />,
@@ -44,12 +43,8 @@ export const HomeHeroHeadingMarkdownComponents: MarkdownComponentsType = {
       ...props,
       className: cn("mx-auto mb-6 max-w-[60rem] md:mb-8"),
     }),
-  p: (props) => (
-    <p
-      {...props}
-      className="mx-auto mb-6 max-w-[50rem] text-base md:mb-8 md:text-xl"
-    />
-  ),
+  p: (props) =>
+    HeadingMarkdownComponents.p({ ...props, className: cn("mb-6 md:mb-8") }),
 }
 
 // Used when a page block is themed with a primary background
@@ -61,5 +56,9 @@ export const PrimarySectionHeadingMarkdownComponents: MarkdownComponentsType = {
       ...props,
       className: cn("text-white"),
     }),
-  p: (props) => <p {...props} className="text-primary-content" />,
+  p: (props) =>
+    HeadingMarkdownComponents.p({
+      ...props,
+      className: cn("text-primary-content"),
+    }),
 }
