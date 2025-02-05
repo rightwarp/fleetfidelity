@@ -3,6 +3,7 @@ import { tinaField } from "tinacms/dist/react"
 
 import { CallToAction } from "./CallToAction"
 import { CostSavings } from "./CostSavings"
+import { Hero } from "./Hero"
 import { HomeHero } from "./HomeHero"
 import { IconGrid } from "./IconGrid"
 import { KeyBenefits } from "./KeyBenefits"
@@ -31,6 +32,8 @@ const Block = (block: PageBlocks) => {
       return <IconGrid {...block} />
     case "PageBlocksCallToAction":
       return <CallToAction {...block} />
+    case "PageBlocksHero":
+      return <Hero {...block} />
 
     // home page blocks
     case "PageBlocksHomeHero":

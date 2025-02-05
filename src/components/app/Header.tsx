@@ -175,7 +175,7 @@ export const Header = ({ query }: Headerprops) => {
 
   return (
     <header className="sticky top-0 z-20">
-      <div className="flex items-center justify-between bg-base-200 px-3 py-2 md:px-16">
+      <div className="flex items-center justify-between bg-base-200 px-4 py-2 md:px-8 lg:px-12">
         <Link href="/" onClick={closeMenu}>
           <Image
             priority
