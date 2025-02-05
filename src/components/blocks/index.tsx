@@ -9,6 +9,7 @@ import { Hero } from "./Hero"
 import { HomeHero } from "./HomeHero"
 import { IconGrid } from "./IconGrid"
 import { KeyBenefits } from "./KeyBenefits"
+import { Team } from "./Team"
 import { Testimonials } from "./Testimonials"
 
 export const Blocks = (props: Page) => {
@@ -52,6 +53,8 @@ const Block = (block: PageBlocks) => {
       return <CompanyStory {...block} />
     case "PageBlocksBeliefs":
       return <Beliefs {...block} />
+    case "PageBlocksTeam":
+      return <Team {...block} />
 
     // default
     default:

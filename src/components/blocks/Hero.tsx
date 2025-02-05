@@ -10,7 +10,7 @@ import {
 export const Hero = ({ heading, hasDivider }: PageBlocksHero) => {
   return (
     <Container tag="section" hasDivider={hasDivider}>
-      <div className="mx-auto max-w-[70rem] text-start">
+      <div className="mx-auto max-w-[70rem]">
         <TinaMarkdown
           content={heading}
           components={
@@ -19,7 +19,7 @@ export const Hero = ({ heading, hasDivider }: PageBlocksHero) => {
               h1: (props) =>
                 HeadingMarkdownComponents.h1({
                   ...props,
-                  className: "mb-0 lg:mb-0",
+                  className: "mb-0 lg:mb-0 text-center",
                 }),
             } as MarkdownComponentsType
           }

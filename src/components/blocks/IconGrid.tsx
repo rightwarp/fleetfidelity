@@ -172,7 +172,7 @@ export const IconGrid = ({
       {!!bottomText?.children?.length && (
         <div
           className={cn(
-            "mx-auto max-w-[55rem] rounded-xl p-[2.5rem] text-center",
+            "mx-auto max-w-[60rem] rounded-xl p-[2.5rem] text-center",
             {
               "bg-navy-700/20": theme === Themes.PRIMARY,
               "bg-base-200": theme === Themes.DEFAULT,
