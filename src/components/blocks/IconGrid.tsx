@@ -81,7 +81,7 @@ export const IconGrid = ({
         }),
       }}
     >
-      <div className="flex flex-col text-center">
+      <div className="text-center">
         <TinaMarkdown
           content={heading}
           components={
@@ -126,7 +126,7 @@ export const IconGrid = ({
                 iconSize={iconSize}
               />
               <div
-                className={cn("flex flex-col gap-3", {
+                className={cn("flex flex-col gap-2", {
                   "items-center text-center":
                     iconLayout === IconLayouts.VERTICAL,
                   "items-center text-center md:items-start md:pt-4 md:text-start":

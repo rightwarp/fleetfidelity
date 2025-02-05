@@ -53,7 +53,7 @@ const TestimonialContent = ({
       <blockquote className="text-center text-lg italic md:text-xl">
         {quote}
       </blockquote>
-      <div className="flex items-center gap-6">
+      <div className="flex flex-col items-center gap-3 sm:flex-row">
         {portrait && (
           <div className="avatar">
             <div className="w=24 mask mask-squircle">
@@ -66,7 +66,7 @@ const TestimonialContent = ({
             </div>
           </div>
         )}
-        <div>
+        <div className="text-center sm:text-start">
           <h3 className="text-base font-bold">{name}</h3>
           <p className="text-sm">{title}</p>
         </div>
@@ -148,7 +148,7 @@ export const Testimonials = ({
         className: cn("bg-base-200"),
       }}
     >
-      <div className="flex flex-col text-center">
+      <div className="text-center">
         <TinaMarkdown
           content={heading}
           components={HeadingMarkdownComponents}

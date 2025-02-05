@@ -106,7 +106,7 @@ export const HomeHero = ({
       }}
       isCollapsed
     >
-      <div className="mb-8 flex flex-col text-center md:mb-12">
+      <div className="mb-8 text-center md:mb-12">
         <TinaMarkdown
           content={heading}
           components={HomeHeroHeadingMarkdownComponents}

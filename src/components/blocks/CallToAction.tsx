@@ -33,7 +33,7 @@ export const CallToAction = ({
         }),
       }}
     >
-      <div className="flex flex-col text-center">
+      <div className="text-center">
         <TinaMarkdown
           content={heading}
           components={
