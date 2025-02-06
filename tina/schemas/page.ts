@@ -5,6 +5,7 @@ import { CostSavings } from "@tina/blocks/CostSavings"
 import { Divider } from "@tina/blocks/Divider"
 import { Hero } from "@tina/blocks/Hero"
 import { HomeHero } from "@tina/blocks/HomeHero"
+import { HubSpotForm } from "@tina/blocks/HubSpotForm"
 import { IconGrid } from "@tina/blocks/IconGrid"
 import { KeyBenefits } from "@tina/blocks/KeyBenefits"
 import { Resources } from "@tina/blocks/Resources"
@@ -71,6 +72,7 @@ export const Page: Collection = {
         Resources,
 
         // contact
+        HubSpotForm,
       ],
     },
   ],

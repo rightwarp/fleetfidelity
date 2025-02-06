@@ -31,5 +31,5 @@
     "src/components/app/.gitkeep",
     "src/components/blocks/.gitkeep"
   ],
-  "exclude": ["node_modules"]
+  "exclude": ["node_modules", "src/vendor"]
 }

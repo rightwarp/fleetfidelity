@@ -10,7 +10,7 @@ export const HeadingMarkdownComponents: MarkdownComponentsType = {
     <h1
       {...props}
       className={cn(
-        "font-heading text-3xl !leading-[100%] tracking-tight text-black md:text-5xl lg:text-[3.75rem]",
+        "mb-6 font-heading text-3xl !leading-[100%] tracking-tight text-black md:mb-8 md:text-5xl lg:text-[3.75rem]",
         className,
       )}
     />

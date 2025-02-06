@@ -8,6 +8,10 @@ const nextConfig: NextConfig = {
         protocol: "https",
         hostname: "assets.tina.io",
       },
+      {
+        protocol: "https",
+        hostname: "hsforms.net"
+      }
     ],
   },
   async rewrites() {

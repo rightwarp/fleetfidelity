@@ -8,6 +8,7 @@ import { CostSavings } from "./CostSavings"
 import { Divider } from "./Divider"
 import { Hero } from "./Hero"
 import { HomeHero } from "./HomeHero"
+import { HubSpotForm } from "./HubSpotForm"
 import { IconGrid } from "./IconGrid"
 import { KeyBenefits } from "./KeyBenefits"
 import { Resources } from "./Resources"
@@ -44,6 +45,10 @@ const Block = (block: PageBlocks) => {
       return <Spacer {...block} />
     case "PageBlocksDivider":
       return <Divider {...block} />
+
+    // form blocks
+    case "PageBlocksHubSpotForm":
+      return <HubSpotForm {...block} />
 
     // home page blocks
     case "PageBlocksHomeHero":

@@ -1,6 +1,7 @@
 package-lock.json
 next-env.d.ts
 next.config.ts
+src/vendor
 
 # next
 .next

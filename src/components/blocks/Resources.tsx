@@ -6,11 +6,7 @@ import { Container } from "../app/Container"
 
 export const Resources = ({ resources, isCollapsed }: PageBlocksResources) => {
   return (
-    <Container
-      tag="section"
-      isCollapsed={isCollapsed}
-      outerProps={{ className: "mx-auto max-w-[70rem]" }}
-    >
+    <Container tag="section" isCollapsed={isCollapsed}>
       <ul className="grid gap-2 lg:grid-cols-2">
         {resources.map(
           ({
@@ -18,7 +14,7 @@ export const Resources = ({ resources, isCollapsed }: PageBlocksResources) => {
           }) => (
             <li
               key={id}
-              className="relative flex gap-2 rounded-lg border border-base-300 py-3 pe-8 ps-3 hover:border-navy-50 hover:bg-navy-50 sm:gap-3 lg:gap-4"
+              className="relative flex gap-2 rounded-2xl border border-base-300 py-3 pe-8 ps-3 hover:border-navy-50 hover:bg-navy-50 sm:gap-3 lg:gap-4"
             >
               <a href={href} className="absolute inset-0 z-10">
                 <span className="sr-only">{title} (opens in new tab)</span>
@@ -32,7 +28,7 @@ export const Resources = ({ resources, isCollapsed }: PageBlocksResources) => {
                 alt={""}
                 width={128}
                 height={128}
-                className="size-16 rounded border border-base-200 md:size-32"
+                className="size-16 rounded-lg border border-base-200 md:size-32"
               />
               <div className="flex flex-col gap-2">
                 <span className="text-xs font-semibold uppercase text-base-content">
