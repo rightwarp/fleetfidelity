@@ -4,6 +4,8 @@
 
 This README details how to use the site, both as a developer and content manager.
 
+For specific hand off notes, please reference that [here](https://docs.google.com/document/d/1qziXgp3qLGH4JZ7Jobqp_oc3lUSVIr8-MTvuGRxqh3I/edit?tab=t.0).
+
 ### Content
 
 Content is powered by [Tina CMS](https://tina.io/). All content files are stored in markdown (`mdx`, specifically) and JSON in `src/content`.

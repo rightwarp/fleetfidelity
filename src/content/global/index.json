@@ -6,11 +6,10 @@
     "svgIcon": "/uploads/icon.svg",
     "appleIcon": "/uploads/apple-icon.png"
   },
-  "seo": {
+  "meta": {
     "metaTitle": "The Most Comprehensive Fleet-Driven Performance Platform",
     "metaDescription": "Fleet Fidelity is the next evolution in fleet management, uniting all your data into actionable insights, boosting safety, profitability, and performance",
-    "metaKeywords": "Fleet Fidelity, Fleet Software, Fleet Management, Transportation Software, Fleet Manager, Transportation, Fleets",
-    "url": "https://fleetfidelity.com"
+    "metaKeywords": "Fleet Fidelity, Fleet Software, Fleet Management, Transportation Software, Fleet Manager, Transportation, Fleets"
   },
   "openGraph": {
     "image": "/uploads/og-image.png",

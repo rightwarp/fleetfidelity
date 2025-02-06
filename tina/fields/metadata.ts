@@ -4,8 +4,8 @@ const KEYWORD_MIN = 3
 
 export const MetadataField: TinaField = {
   type: "object",
-  name: "seo",
-  label: "SEO & Metadata",
+  name: "meta",
+  label: "Metadata & SEO",
   fields: [
     {
       name: "metaTitle",
@@ -27,19 +27,6 @@ export const MetadataField: TinaField = {
           const keywords = input?.split(",")
           if (keywords && keywords.length < KEYWORD_MIN) {
             return `At least ${KEYWORD_MIN} keywords are required`
-          }
-        },
-      },
-    },
-    {
-      name: "url",
-      label: "Canonical URL or Path",
-      type: "string",
-      description: "E.g., https://website.com or /blog",
-      ui: {
-        validate: (input) => {
-          if (input && !input.startsWith("/") && !input.startsWith("http")) {
-            return "Must be a valid URL or relative path"
           }
         },
       },
