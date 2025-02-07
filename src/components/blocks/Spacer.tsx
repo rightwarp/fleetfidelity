@@ -16,6 +16,7 @@ export const Spacer = ({ color }: PageBlocksSpacer) => {
         "h-16 w-full lg:h-24",
         color ? Colors[color] : Colors.Transparent,
       )}
+      aria-hidden={true}
     />
   )
 }

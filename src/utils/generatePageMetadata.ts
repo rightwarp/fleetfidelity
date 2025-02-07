@@ -98,7 +98,7 @@ export async function generatePageMeta(
   let metadataBase: string | URL = "localhost:3000"
   if (
     process.env.NODE_ENV === "development" &&
-    process.env.CONFIG_METADATA_BASE_URL
+    process.env.DEV_METADATA_BASE_URL
   ) {
     metadataBase = new URL(metadataBase!)
   } else if (PROD_OR_DEPLOY_URL) {

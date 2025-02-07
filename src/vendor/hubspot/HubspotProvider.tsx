@@ -1,3 +1,5 @@
+// https://github.com/snelsi/next-hubspot
+
 import NextScript from "next/script.js"
 import type { ScriptProps } from "next/script.js"
 import React, {

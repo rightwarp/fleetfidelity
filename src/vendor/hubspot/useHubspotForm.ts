@@ -1,3 +1,5 @@
+// https://github.com/snelsi/next-hubspot
+
 import { useEffect, useState, useDebugValue } from "react"
 
 import { useHubspotContext } from "./HubspotProvider"

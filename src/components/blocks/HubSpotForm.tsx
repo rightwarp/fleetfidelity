@@ -3,8 +3,7 @@ import { TriangleAlert } from "lucide-react"
 import { PropsWithChildren } from "react"
 import { v4 as uuidv4 } from "uuid"
 
-import { HubspotProvider } from "@/vendor/HubspotProvider"
-import { useHubspotForm } from "@/vendor/useHubSpot"
+import { HubspotProvider, useHubspotForm } from "@/vendor/hubspot"
 
 import { Container } from "../app/Container"
 
