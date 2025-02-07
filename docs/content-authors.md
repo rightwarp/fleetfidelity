@@ -4,57 +4,169 @@ These docs provide high level instructions and details for using Tina CMS. For F
 
 [Looking for developer docs? ➡️](developers.md)
 
-## CMS Concepts for editors
+Table of Contents
 
-These concepts should be enough to enable any CMS author the ability to edit page content with relative ease.
+- [Prerequisites](#pre-requisites)
+- [Sign Up/Login](#sign-uplogin)
+- [Navigation](#navigation)
+- [CMS concepts](#cms-concepts)
+- [Rolling back changes](#rolling-back-changes)
+
+## Pre-requisites
+
+To use the site CMS, you should already have access to a Tina account associated with the website. If you do, great! If not, ask Right Warp or someone on your team who might have access already to add you to the project as an admin.
+
+## Sign Up/Login
+
+To use the CMS, visit the root URL of your website and add `/admin` to the end. This will take you to a login prompt, like so:
+
+<img src="images/login-prompt.png" alt="Login prompt" width="400" height="auto">
+
+Which will then take you over to a login form:
+
+![Login input](images/login-input.png)
+
+Once you're signed in, you will be forwarded to the home page of the site in visual editing mode:
+
+![Landing page](images/landing-page.png)
+
+## Navigation
+
+Tina is structured similar to other CMS tools. It has two viewing modes: admin view and visual editing view.
+
+### Admin view
+
+The admin view simply means there is no side-by-side editing associated with a page of the website.
+
+### Visual editing view
+
+Visual editing, however, shows the page you are editing in real time.
+
+### Content structure
+
+To see all of the CMS's content, select the menu icon on the top left of the page.
+
+<img src="images/menu-icon.png" alt="Menu icon" width="500" height="auto">
+
+Doing so will reveal the primary CMS navigation menu.
+
+<img src="images/tina-nav.png" alt="Tina navigation" width="500" height="auto">
+
+Here's a breakdown of the menu sections:
+
+- `Collections` refers to the data you can edit on the site.
+- `Site` refers primarily just to the media manager - it is shared across all content.
+- `Cloud` refers to account management.
+
+#### Collections
+
+As mentioned, all website content lives here.
+
+- `Global`: This content is used site-wide. It contains things like default meta tags, the GTM ID value, open graph images, icons, as well as the site name which is used in the title for every page.
+- `Header` and `Footer`: Content related to the site's global navigation, such as logos and links to other pages.
+- `Pages`: As it suggests: content for each discrete page. You can also add pages here, but more on that later.
+
+All the other collections are shared data used across multiple pages, or that need dedicated editing experiences (such as the team and resources).
+
+#### Media manager
+
+You can edit every image or asset from this page. Be careful when deleting images from here unless you're absolutely sure they're not referenced elsewhere.
+
+#### Project config
+
+This redirects to your Tina account to manage users, data, and the repository connection.
+
+## CMS concepts
+
+These concepts should be enough to enable any CMS manager/content author the ability to edit page content with relative ease.
 
 ### Editing basics
 
-Editing the website brings a relatively painless experience thanks to Tina's features.
+Editing content in the CMS is straightforward thanks to its intuitive UI. A few key areas to call out when viewing any Collection in the CMS:
 
-Useful things to know:
+Global collections, like `Global`, `Header` and `Footer`, always open in the admin view.
 
-- `Global`, `Header`, and `Footer` collections contain fields that affect all pages on the site, given their persistence in either navigation, graphics, or fallback metadata values.
-- Editing any given page provides visual editing. E.g., viewing a page in the admin panel will double-up with the real web page while you make edits.
-- Saved changes are reflected immediately in your current viewing session. The live website will take a few minutes to reflect them, as all pages are statically regenerated on each save.
+![Admin view](images/admin-view.png)
 
-### Page blocks
+All other collections open to a file manager view
 
-All page content is structured as blocks (similar to other page builder tools like Webflow or Wordpress). The key difference however is that all blocks are pre-built, rather than WYSIWYG. This means their stylistic structure is predefined during development.
+![File view](images/file-view.png)
 
-Each page block makes one or tow presumptions about its use, such as its color scheme, typographic hierarchy, and the like. This means most blocks will use an `h2` for their main heading and a `p` for subheading (with the exception of `Hero` blocks). Some data is structured into lists, including references to other collections, and all their content and assets are freely editable (such as icons).
+Non-page collections with a file view will keep you in the admin panel.
 
-Blocks, by their nature, are not reusable. So if you want to add a new CTA on a page, you will need to define its content at the time you add the block each time.
+---
 
-### Collection references
+When making a change, you will see two buttons on the bottom of the admin panel: Save and Reset. They do what you might expect.
 
-As mentioned in the previous sections, some blocks of the various pages rely on references to other collections (e.g., Pages, Resources, Testimonials, Team). Any time you want to modify these collections, note any references will automatically update with the change.
+<img src="images/save-edit.png" alt="Saving and editing" width="400" height="auto">
 
-To re-iterate, deleting an actively used reference can inadvertently break a page. For instance, if you need to remove a testimonial from its collection, first remove the referenced item from any instances of the Testimonials block.
+More on editing soon.
 
-Similarly, to add a new reference, you can first add a new item to its respectively collection, then go to a corresponding page block that uses that reference to insert it. The intent of this model is to ensure no content is unintentionally automatically inserted on a given page when it's not desired.
+### Pages
 
-## Managing metadata & SEO
+The `Pages` collection is the special snowflake of the bunch, as clicking on a page in the file view takes you to a visual editor (if you remember from when you first logged in).
 
-You can edit page metadata from the `Global` collection in the admin panel. This includes SEO meta tags, icons, the default opengraph image, and Google Tags ID.
+![Visual editing example](images/landing-page.png)
 
-In addition to editing this data at the global level, you can edit it on a per-page. When viewing a page in the `Pages` collection, the same `SEO` and `Open Graph` fields will appear for you to edit. You should always have title, description, and keywords defined. The page will override the default values if they're given here.
+When viewing the Pages collection, you can freely add pages to the CMS using the "Add Files" button. You can also add a folder for a nested route (e.g., `<url>/about/careers`). Take note of the file name when creating a new page (the bottom-most field).
 
-## Pages
+![Collection file names](images/filename.png)
 
-Under the Pages collection, you can freely add pages to the CMS. Take note of the file name when creating a new page (the bottom-most field).
-
-**This should always be lowercase, dash-separated for consistency.** The `Title` field of a page is used to prefill this field. Double check it before saving.
+**This should always be lowercase and dash-separated.** The `Title` field of a page is used to prefill this value. Double check it before saving.
 
 If you save a bad file name, you can always:
 
 - Delete the page, assuming it isn't referenced by another collection, and recreate it with a corrected file name.
 - Edit the filename, again assuming it isn't referenced yet.
 
-To add a page to visible navigation, go to `Header` or `Footer` collections and find the Navigation list. Add an item using the blue plus icon (top right) and set the page reference from the dropdown, along with the visible label.
+#### Adding pages to navigation
 
-Be careful where the new page is ordered in the list, as the header navigation will be ordered left to right, while the footer's navigation wraps left to right, top to bottom.
+To add a page to visible navigation, go to `Header` or `Footer` collections and find the Navigation list.
 
-To remove a page, first go to the header or footer collections again and find the navigation item for the respective page. Click the trash icon to remove it. Ensure no links from other pages reference the soon-to-be-deleted page (such as call to actions). Then go to the Pages collection and delete the page.
+![Navigation fields](images/navigation.png)
 
-If you delete a page and the site fails to update, there was probably a build error. See [troubleshooting](#troubleshooting) for details.
+Add an item using the blue plus icon and set the page reference from the dropdown, along with the visible label. You can optionally set an external URL using the `External Link` field. Finally, set the `Action Type`, which will almost always be `Secondary`
+
+![Adding navigation items](images/navitem.png)
+
+Be careful where the new page is ordered in the list, as the header navigation will be ordered left to right, while the footer's navigation wraps left to right _and_ top to bottom.
+
+To remove a page, first go to the `Header` and/or `Footer` collections again and find the navigation item for the respective page. Click the trash icon to remove it.
+
+<img src="images/delete.png" alt="Delete a page navigation item" width="150" height="auto">
+
+Ensure no links from any pages or collections reference the soon-to-be-deleted page (such as call to actions). Then go to the `Pages` collection and delete the page.
+
+![Deleting page](images/deletepage.png)
+
+If you delete a page and the site fails to update, there was probably a build error. See [troubleshooting](../README.md#troubleshooting) for details.
+
+### Page blocks
+
+All page content is structured as blocks (similar to other page builder tools like Webflow or Wordpress). These are re-arrangeable, and you can add/remove blocks as desired.
+
+<img src="images/blocks.png" alt="Blocking editing" width="300" height="auto">
+
+The key difference however is that all blocks are pre-built, rather than full-WYSIWYG. This means their stylistic structure is predefined during development.
+
+Each page block makes one or two presumptions about its use, such as its color scheme, typographic hierarchy, and the like. This means most blocks will use an `h2` for their main heading and a `p` for subheading (with the exception of `Hero` blocks). For this reason, most WYSIWYG fields will have limited configuration beyond bold, italics, and content.
+
+Some data is structured into lists, including references to other collections, and all their content and assets are freely editable (such as icons).
+
+<img src="images/editing-controls.png" alt="Editing controls" width="400" height="auto">
+
+Blocks, by their nature, are not reusable. So if you want to add a new CTA on a page, you will need to define its content at the time you add the block each time.
+
+### References
+
+References are how fields reference each other to prevent excessive duplication. For instance, all navigation fields are references to the `Pages` collection items.
+
+<img src="images/reference.png" alt="References" width="400" height="auto">
+
+When deleting any collection item, always ensure all references to it are removed from other pages, blocks, and fields, otherwise the website will encounter errors (or behave unexpectedly).
+
+## Rolling back changes
+
+If you happen to perform an action in the CMS that causes an error, you can always go back and redeploy a previous version of the site. Work with your developers to do this, otherwise you can navigate into your hosting provider and do it yourself.
+
+TBD details Vercel vs Netlify

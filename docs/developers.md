@@ -4,6 +4,13 @@ These docs provide high level development guidance, including building with [Tin
 
 [Looking for content authoring docs? ➡️](content-authors.md)
 
+Table of Contents
+
+- [Local Development](#local-development)
+- [Services](#services)
+- [Robots & sitemap generation](#robots--sitemap-generation)
+- [How to add new page blocks](#how-to-add-new-page-blocks)
+
 ## Local development
 
 Environment variables are required to run the site locally. See [`.env.example`](../.env.example) for which are required.

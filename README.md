@@ -2,20 +2,10 @@
 
 Table of Contents
 
-- Overview
-- Content authors
-  - CMS Concepts for editors
-    - Editing basics
-    - Page blocks
-    - Collection references
-  - Metadata & SEO
-  - Pages
-- Developers
-  - Services
-  - Robots & sitemap generation
-  - How to add new page blocks
-- Next JS documentations
-- Troubleshooting
+- [Overview](#overview)
+- [Content authors](#content-authors)
+- [Developers](#developers)
+- [Troubleshooting](#troubleshooting)
 
 ## Overview
 
@@ -49,7 +39,7 @@ The easiest way to deploy this app is using these two hosting providers. They pr
 
 ### My CMS edits won't appear on the live site, what do I do?
 
-This likely means there's an error with the content of the site, blocking a successful build. Go to the deployment manager used for the site (Netlify will be used in this example). Find the list of published deploys for the project, and redeploy the last successful one. Once finished, you can try making edits again according to the [content instructions](#content) in this README.
+This likely means there's an error with the content of the site, blocking a successful build. Go to the deployment manager used for the site (Netlify will be used in this example). Find the list of published deploys for the project, and redeploy the last successful one. Once finished, you can try making edits again.
 
 ### I added a page/testimonial/team member/etc and it isn't appearing on the site
 
