@@ -11,7 +11,7 @@ const FormWrapper = ({ children }: PropsWithChildren) => {
   return <HubspotProvider>{children}</HubspotProvider>
 }
 
-const HubspotForm = ({
+const FormContent = ({
   formId,
   portalId,
   instanceId,
@@ -59,14 +59,14 @@ export const HubSpotForm = ({
   const instanceId = uuidv4()
 
   return (
-    <FormWrapper>
-      <Container tag="section" isCollapsed={isCollapsed}>
-        <HubspotForm
+    <Container tag="section" isCollapsed={isCollapsed}>
+      <FormWrapper>
+        <FormContent
           formId={formId}
           portalId={portalId}
           instanceId={instanceId}
         />
-      </Container>
-    </FormWrapper>
+      </FormWrapper>
+    </Container>
   )
 }

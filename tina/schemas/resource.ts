@@ -21,7 +21,6 @@ export const Resource: Collection = {
       name: "type",
       label: "Type",
       type: "string",
-      options: ["White Paper", "Case Study"],
       required: true,
     },
     {
