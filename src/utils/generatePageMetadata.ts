@@ -24,7 +24,11 @@ type MetaConfig = {
 }
 
 const getPageTitle = (siteName?: string, pageTitle?: string) =>
-  pageTitle ? `${siteName} | ${pageTitle}` : siteName ? siteName : "Needs Title"
+  pageTitle && siteName
+    ? `${pageTitle} | ${siteName}`
+    : siteName
+      ? siteName
+      : "Site Title"
 
 const getIcons = (global: Global) => {
   const icons: Metadata["icons"] = []
@@ -88,7 +92,7 @@ export async function generatePageMeta(
     dynamicDescription ||
     page?.meta?.metaDescription ||
     global.meta?.metaDescription ||
-    "Needs description"
+    "Site description"
   const keywords = page?.meta?.metaKeywords || global?.meta?.metaKeywords
 
   // These are Netlify environment variables but can be replaced for any env var
@@ -124,13 +128,13 @@ export async function generatePageMeta(
     dynamicTitle ||
     getPageTitle(
       global.siteName,
-      page?.meta?.metaTitle || global.meta?.metaTitle || "Needs Title",
+      page?.meta?.metaTitle || global.meta?.metaTitle || "Site Title",
     )
   const ogDescription =
     dynamicDescription ||
     page?.meta?.metaDescription ||
     global?.meta?.metaDescription ||
-    "Needs Description"
+    "Site Description"
   const ogUrl = canonical
   const ogType = (pageOpenGraph?.type || globalOpenGraph?.type) as OgType
 

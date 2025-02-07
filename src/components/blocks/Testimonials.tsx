@@ -55,15 +55,13 @@ const TestimonialContent = ({
       </blockquote>
       <div className="flex flex-col items-center gap-3 sm:flex-row">
         {portrait && (
-          <div className="avatar">
-            <div className="w=24 mask mask-squircle">
-              <Image
-                src={portrait.src}
-                alt={portrait.alt || name || ""}
-                width={48}
-                height={48}
-              />
-            </div>
+          <div className="overflow-hidden rounded-full">
+            <Image
+              src={portrait.src}
+              alt={portrait.alt || name || ""}
+              width={48}
+              height={48}
+            />
           </div>
         )}
         <div className="text-center sm:text-start">

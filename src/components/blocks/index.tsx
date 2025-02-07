@@ -15,6 +15,7 @@ import { Resources } from "./Resources"
 import { Spacer } from "./Spacer"
 import { Team } from "./Team"
 import { Testimonials } from "./Testimonials"
+import { WYSIWYG } from "./WYSIWYG"
 
 export const Blocks = (props: Page) => {
   return (
@@ -45,6 +46,8 @@ const Block = (block: PageBlocks) => {
       return <Spacer {...block} />
     case "PageBlocksDivider":
       return <Divider {...block} />
+    case "PageBlocksWysiwyg":
+      return <WYSIWYG {...block} />
 
     // form blocks
     case "PageBlocksHubSpotForm":
