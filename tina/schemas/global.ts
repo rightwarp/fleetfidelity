@@ -27,7 +27,7 @@ export const Global: Collection = {
     MetadataField,
     OpenGraphField,
     {
-      name: "googleTag",
+      name: "googleTagId",
       label: "Google Tag ID",
       description:
         "Learn more: https://support.google.com/analytics/answer/9539598?hl=en",

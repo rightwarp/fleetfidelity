@@ -1,3 +1,5 @@
+import { GoogleTagManager } from "@next/third-parties/google"
+import client from "@tina/__generated__/client"
 import { Poppins, League_Spartan } from "next/font/google"
 
 import { Layout } from "@/components/app/Layout"
@@ -19,17 +21,21 @@ const poppins = Poppins({
   display: "swap",
 })
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode
 }>) {
+  const global = await client.queries.global({ relativePath: "index.json" })
+  const gtmId = global?.data?.global?.googleTagId
+
   return (
     <html lang="en">
       <body
         className={cn("antialiased", leagueSpartan.variable, poppins.variable)}
       >
         <Layout>{children}</Layout>
+        {gtmId && <GoogleTagManager gtmId={gtmId} />}
       </body>
     </html>
   )
