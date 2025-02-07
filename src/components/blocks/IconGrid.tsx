@@ -105,7 +105,7 @@ export const IconGrid = ({
           "max-w-[35rem]":
             iconSize === IconSizes.NORMAL &&
             iconLayout === IconLayouts.VERTICAL,
-          "mb-16": !!bottomText,
+          "mb-16": !!bottomText?.children?.length,
         })}
       >
         {icons.map((icon, idx) => {
