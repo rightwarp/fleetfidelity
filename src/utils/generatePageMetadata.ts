@@ -99,31 +99,24 @@ export async function generatePageMeta(
   const PROD_OR_DEPLOY_URL =
     process.env.URL || process.env.DEPLOY_PRIME_URL || process.env.DEPLOY_URL
 
-  let metadataBase: string | URL = "localhost:3000"
-  if (
-    process.env.NODE_ENV === "development" &&
-    process.env.DEV_METADATA_BASE_URL
-  ) {
-    metadataBase = new URL(metadataBase!)
+  const fallbackDevUrl = "http://localhost:3000"
+  let metadataBase: Metadata["metadataBase"]
+  if (process.env.NODE_ENV === "development") {
+    metadataBase = new URL(process.env.DEV_METADATA_BASE_URL || fallbackDevUrl)
   } else if (PROD_OR_DEPLOY_URL) {
     metadataBase = new URL(PROD_OR_DEPLOY_URL)
   } else {
     metadataBase = new URL("https://placehold.co")
   }
 
-  const canonical = `${metadataBase.href}${pagePath ? `${pagePath}/` : ""}`
+  const canonical = pagePath || metadataBase.origin
 
   // open graph
 
   const pageOpenGraph = page?.openGraph
   const globalOpenGraph = global.openGraph
 
-  const _ogImage = pageOpenGraph?.image || globalOpenGraph?.image
-
-  const ogImage =
-    process.env.NODE_ENV === "development"
-      ? `${metadataBase.href}${_ogImage}`
-      : _ogImage
+  const ogImage = pageOpenGraph?.image || globalOpenGraph?.image
   const ogTitle =
     dynamicTitle ||
     getPageTitle(

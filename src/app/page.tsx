@@ -9,7 +9,7 @@ export async function generateMetadata() {
   const query = await client.queries.page({ relativePath: "home.mdx" })
   const page = query.data.page
 
-  return generatePageMeta(page as Page, { path: "" })
+  return generatePageMeta(page as Page)
 }
 
 export default async function Home() {
